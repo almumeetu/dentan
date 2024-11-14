@@ -1,9 +1,6 @@
 /***************************************************
 ==================== JS INDEX ======================
 ****************************************************
-01. PreLoader Js
-
-
 ****************************************************/
 
 (function ($) {
@@ -17,14 +14,14 @@
 	});
 
 	////////////////////////////////////////////////////
-	// 04. Body overlay Js
+	// 01. Body overlay Js
 	$(".body-overlay").on("click", function () {
 		$(".offcanvas__area").removeClass("opened");
 		$(".body-overlay").removeClass("opened");
 	});
 
 	////////////////////////////////////////////////////
-	// 06. Sticky Header Js
+	// 02. Sticky Header Js
 	windowOn.on('scroll', function () {
 		var scroll = $(window).scrollTop();
 		if (scroll < 100) {
@@ -34,9 +31,15 @@
 		}
 	});
 
-	// 07. Nice Select Js
+	////////////////////////////////////////////////////
+	// 03. Nice Select Js
 	$('select').niceSelect();
 
-    // Wow Js
+	////////////////////////////////////////////////////
+    // 04. Wow Js
 	new WOW().init();
+
+	////////////////////////////////////////////////////
+
+
 })(jQuery);

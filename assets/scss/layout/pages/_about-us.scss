@@ -1,7 +1,12 @@
-
+@use '../../utils' as *;
 /*----------------------------------------*/
 /*  26. ABOUT US CSS START
 /*----------------------------------------*/
 
-
-
+.main-header{
+    color: red;
+    @media #{$lg,$xl,$md}{
+        font-size: 22px;
+        line-height: 32px;
+    }
+}
