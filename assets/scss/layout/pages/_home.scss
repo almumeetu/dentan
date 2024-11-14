@@ -1,0 +1,140 @@
+@use '../../utils' as *;
+
+
+
+/*----------------------------------------*/
+/*  03. HERO CSS START HERE
+/*----------------------------------------*/
+.hero-area{
+    .hero-content{
+        .hero-title{
+            padding-bottom: 30px;
+            margin: 0;
+        }
+        p{
+            padding-bottom: 40px;
+            margin: 0;
+        }
+        .appointment-button{
+            padding-bottom: 30px;
+        }
+        .location-selector{
+            padding: 14px 28px;
+            background: var(--st-common-white);
+            border-radius: 35px;
+            width: 85%;
+            .location-icon{ 
+                i{
+                    border: 1px solid var(--st-border-1);
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                }
+            }
+            .search-options{
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background: var(--st-theme-primary);
+            }
+            .nice-select { 
+                background-color: transparent;
+                border: none;
+                .current{
+                    font-size: 20.9px;
+                    font-weight: 500;
+                    
+                }
+            }
+        }
+    }
+    .hero-image-container{
+        padding-top: 108px;
+        .star-overlay{
+            right: -140px;
+            top: 31%;
+        }
+        .snack-overlay{
+            bottom: 60px;
+            left: 35px;
+        }
+        .hero-left-img{
+            justify-content: end;
+            .first-img{
+                max-width: 330px;
+                max-height: 400px;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+            }
+        }
+        .hero-phone-number{
+            margin-left: 30px;
+        }
+        .hero-card{
+            max-width: 240px;
+            background: var(--st-theme-primary);
+            padding: 30px 15px;
+            text-align: center;
+            border-radius: 30px;
+            width: 100%;
+            .phone-icon{
+                width: 80px;
+                height: 80px;
+                background: #CCD9C4;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                font-size: 36px;
+                margin: 0 auto;
+            }
+            span{
+                padding-top: 20px;
+                display: block;
+                padding-bottom: 5px;
+            }
+            h6{
+                font-weight: 500;
+            }
+        }
+        .heart-spaciallist{
+            margin-top: 30px;
+            padding: 15px 30px;
+            img{
+                max-width: 80px;
+                max-height: 80px;
+                border-radius: 50%;
+            }
+            h6{
+                padding-top: 10px;
+            }
+            span{
+               padding: 0;
+               font-size: 16px;
+               line-height: 24px;
+            }
+            .card-social{
+                padding-top: 12px;
+                ul{
+                    li{
+                        display: inline;
+                        padding: 0 12px;
+                        a{
+                            i{
+                                font-size: 16px;
+                                line-height: normal;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

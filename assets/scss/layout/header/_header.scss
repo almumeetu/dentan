@@ -6,7 +6,8 @@
 .header-area{
     background: var(--st-grey-1);
     padding-top: 30px;
-    height: 700px;
+    background-repeat: no-repeat;
+    background-position: bottom right;
     .header-navigation{
         background: var(--st-common-white);
         border-radius: 999px;

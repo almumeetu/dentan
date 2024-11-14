@@ -119,7 +119,7 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
-      
+
     //transition
     @mixin transition($time) {
         -webkit-transition: all $time ease-out 0s;

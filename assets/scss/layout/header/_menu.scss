@@ -16,7 +16,11 @@
                     font-size: 15px;
                     font-weight: 600;
                     line-height: 22.55px;
+                    transition: color ease-in-out .3s;
                     color: var(--st-heading-primar);
+                    i{
+                        transition: color ease-in-out .3s;
+                    }
                 }
             }
         }
