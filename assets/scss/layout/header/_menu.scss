@@ -3,26 +3,374 @@
 /*  02. Main Menu CSS START HERE
 /*----------------------------------------*/
 
- .main-menu{
-    nav{
-        ul{
-            li{
-                list-style: none;
-                a{
-                    float: left;
-                    text-align: center;
-                    padding: 0 12.5px;
-                    text-decoration: none;
-                    font-size: 15px;
-                    font-weight: 600;
-                    line-height: 22.55px;
-                    transition: color ease-in-out .3s;
-                    color: var(--st-heading-primar);
-                    i{
-                        transition: color ease-in-out .3s;
-                    }
+.main-menu {
+    text-align: center;
+    nav {
+      ul {
+        li {
+            &:hover .submenu {
+                visibility: visible;
+                opacity: 1;
+                transform: scaleY(1);
+              }
+      
+              &:hover .mega-menu {
+                transform: scaleY(1);
+                visibility: visible;
+                opacity: 1;
+                top:100px;
+                width: 70%;
+              }
+      
+          list-style: none;
+          display: inline-block;
+          margin-right: 25px;
+          position: relative;
+          transition: all 0.3s ease-out 0s;
+  
+          @media #{$lg} {
+            margin-right: 15px;
+          }
+  
+          @media only screen and (min-width: 992px) and (max-width: 1199px) {
+            &.p-lg-inherit {
+              position: inherit;
+            }
+          }
+  
+          .submenu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 218px;
+            background: var(--st-common-white);
+            z-index: 99;
+            visibility: hidden;
+            opacity: 0;
+            transform-origin: top center;
+            padding: 22px 0 12px;
+            transform: scaleY(0);
+            box-shadow: 0px 20px 30px rgba(3, 4, 28, 0.1);
+            transition: all 0.3s ease-out 0s;
+  
+            li {
+              display: block;
+              width: 100%;
+              margin: 0;
+              padding: 0;
+              transform: translateY(-10px);
+  
+              &:hover > a {
+                color: var(--st-theme-secondary) !important;
+                padding-left: 43px;
+              }
+  
+              &:hover > a::before {
+                width: 12px;
+              }
+  
+              &:hover > .submenu {
+                transform: translateY(1);
+                visibility: visible;
+                opacity: 1;
+              }
+            }
+  
+            li a {
+              position: relative;
+              z-index: 11;
+              color: var(--st-common-black);
+              font-weight: 400;
+              font-size: 15px;
+              padding: 6px 28px;
+              padding-bottom: 1px;
+              width: 100%;
+              text-transform: capitalize;
+              transition: all 0.3s ease-out 0s;
+  
+              &::before {
+                position: absolute;
+                content: "";
+                left: 25px;
+                top: 63%;
+                width: 0;
+                height: 1px;
+                background-color: var(--st-theme-secondary);
+                transition: all 0.3s ease-out 0s;
+                transform: translateY(-50%);
+              }
+            }
+          }
+  
+          &:hover > a {
+            color: var(--st-theme-secondary);
+          }
+  
+          > a {
+            display: inline-block;
+            color: var(--st-common-black);
+            padding: 2px 0;
+            text-align: left;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 22.55px;
+            transition: all 0.3s ease;
+            i{
+                padding-left: 5px;
+                font-size: 12px;
+                @media #{$lg} {
+                    padding-left: 3px;
                 }
             }
+          }
         }
+  
+        .mega-menu {
+          position: absolute;
+          z-index: 9999;
+          top: 100%;
+          opacity: 0;
+          visibility: hidden;
+          transition: 0.4s;
+          transform-origin: top;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          width: 100%;
+          transform: scaleY(0);
+          box-shadow: 0px 20px 30px rgba(3, 4, 28, 0.1);
+        }
+      }
     }
- }
+  
+    .megamenu-small {
+      width: 700px;
+      padding: 22px 10px 25px;
+      box-shadow: 0px 20px 30px rgba(3, 4, 28, 0.1);
+      background: var(--st-common-white);
+  
+      @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        width: 650px;
+      }
+    }
+  
+    .megamenu-list {
+      ul {
+        li {
+          display: block;
+          margin-right: 0;
+          position: relative;
+  
+          &:hover > a {
+            padding-left: 43px !important;
+            color: var(--st-theme-primary) !important;
+  
+            &::before {
+              width: 12px;
+              background: var(--st-theme-primary);
+            }
+          }
+  
+          a {
+            position: relative;
+            z-index: 11;
+            color: var(--st-common-black);
+            font-weight: 400;
+            font-size: 15px;
+            padding: 4px 25px !important;
+            padding-bottom: 1px;
+            width: 100%;
+            text-transform: capitalize;
+            display: block;
+            transition: all 0.3s ease-out 0s;
+  
+            &::before {
+              position: absolute;
+              content: "";
+              left: 25px;
+              top: 50%;
+              width: 0;
+              height: 1px;
+              background-color: var(--st-theme-secondary);
+              transition: all 0.3s ease-out 0s;
+              transform: translateY(-50%);
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .main-has-submenu {
+    width: 100%;
+    padding: 30px 30px 10px 30px;
+    background-color: var(--st-common-white);
+    box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+    left: 0;
+    right: 0;
+    margin: auto !important;
+  
+    @media only screen and (min-width: 992px) and (max-width: 1199px),
+           only screen and (min-width: 768px) and (max-width: 991px),
+           only screen and (min-width: 576px) and (max-width: 767px),
+           (max-width: 575px) {
+      width: 100%;
+    }
+  
+    @media only screen and (min-width: 768px) and (max-width: 991px),
+           only screen and (min-width: 576px) and (max-width: 767px),
+           (max-width: 575px) {
+      background: none;
+      box-shadow: none;
+      padding: 0;
+      border: none;
+    }
+  
+    .homemenu {
+      padding: 0px 10px;
+  
+      .homemenu-thumb {
+        box-shadow: 0 1px 3px #010f1c33;
+        transition: all 0.3s 0s ease-out;
+  
+        a {
+          position: relative;
+          display: block;
+          overflow: hidden;
+  
+          img {
+            transition: all 0.3s 0s ease-out;
+            width: 100%;
+  
+            &:hover {
+              transform: scale(1.1);
+            }
+          }
+  
+          &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(38, 34, 33, 0.3);
+            transition: all 0.3s 0s ease-out;
+            opacity: 0;
+            z-index: 1;
+  
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+  
+      .homemenu-title {
+        a {
+          padding: 0;
+          font-size: 16px;
+          font-weight: 500;
+          background-image: linear-gradient(#b7124d, #b7124d), linear-gradient(#b7124d, #b7124d);
+          background-size: 0 1px, 0 1px;
+          background-position: 100% 100%, 0 100%;
+          background-repeat: no-repeat;
+          transition: background-size 0.3s linear;
+          color: var(--st-common-black);
+  
+          &:hover {
+            background-size: 0 1px, 100% 1px;
+            background-position: 100% 100%, 0 100%;
+            transition: background-size 0.3s linear;
+            color: var(--st-theme-secondary);
+          }
+        }
+      }
+    }
+  }
+  
+
+
+  .offcanvas-menu {
+    margin-bottom: 40px;
+  
+    ul {
+      list-style: none;
+  
+      li {
+        position: relative !important;
+  
+        // Applies a border-bottom to all `li > a` items except the last one
+        &:not(:last-child) > a {
+          border-bottom: 1px solid rgba(1, 15, 28, 0.1);
+        }
+  
+        a {
+          padding: 8px 0;
+          display: block;
+          font-size: 15px;
+          font-weight: 500;
+  
+          &:hover {
+            color: var(--theme-primary);
+          }
+        }
+  
+        &.active {
+          > a {
+            color: var(--theme-primary);
+          }
+  
+          > .menu-close {
+            color: var(--common-white);
+            background: var(--theme-primary);
+            border-color: var(--theme-primary);
+  
+            i {
+              transform: rotate(90deg);
+            }
+          }
+        }
+  
+        .submenu {
+          display: none;
+          padding-left: 20px;
+        }
+  
+        .mega-menu {
+          display: none;
+          padding-left: 0;
+          margin-top: -1px;
+        }
+  
+        .megamenu-list {
+          ul {
+            li {
+              a {
+                border-bottom: 1px solid rgba(1, 15, 28, 0.1);
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    .homemenu-title {
+      margin-bottom: 25px;
+    }
+  
+    @media only screen and (min-width: 768px) and (max-width: 991px),
+           only screen and (min-width: 576px) and (max-width: 767px),
+           (max-width: 575px) {
+      ul {
+        li {
+          a {
+            i {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  

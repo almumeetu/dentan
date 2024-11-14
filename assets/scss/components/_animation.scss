@@ -37,3 +37,27 @@
     50% { transform: translateY(8px); }
     100% { transform: translateY(0); }   /* Back to original */
   }
+
+  @keyframes headerSlideDown {
+    0% {
+      margin-top: -150px;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
+
+  @keyframes bar_anim {
+    0%, 100% {
+      -webkit-clip-path: inset(-2px 0);
+      clip-path: inset(-2px 0);
+    }
+    42% {
+      -webkit-clip-path: inset(-2px 0 -2px 100%);
+      clip-path: inset(-2px 0 -2px 100%);
+    }
+    43% {
+      -webkit-clip-path: inset(-2px 100% -2px 0);
+      clip-path: inset(-2px 100% -2px 0);
+    }
+  }

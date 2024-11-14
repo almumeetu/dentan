@@ -8,6 +8,7 @@
     padding-top: 30px;
     background-repeat: no-repeat;
     background-position: bottom right;
+    overflow: hidden;
     .header-navigation{
         background: var(--st-common-white);
         border-radius: 999px;
@@ -16,20 +17,27 @@
             justify-content: end;
             .search-icon{
                 padding-right: 25px;
+                @media #{$lg,$sm,$xs,$md}{
+                    padding-right: 7px;
+                }
                 position: relative;
                 &::before{
                     position: absolute;
                     content: '';
                     width: 1px;
-                    height: 46px;
+                    height: 40px;
                     background: var(--st-common-black);
-                    top: -10px;
+                    top: -7px;
                     right: 0;
                 }
             }
             .sidebar-icon{
                 padding-left: 25px;
+                @media #{$lg,$sm,$xs,$md}{
+                    padding-left: 10px;
+                }
             }
         }
     }
 }
+
