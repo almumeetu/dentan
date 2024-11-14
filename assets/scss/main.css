@@ -611,6 +611,14 @@ input[type=color] {
     clip-path: inset(-2px 100% -2px 0);
   }
 }
+@keyframes headerSlideDown {
+  0% {
+    margin-top: -150px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
 /*----------------------------------------*/
 /*  03. HERO CSS START HERE
 /*----------------------------------------*/
@@ -808,7 +816,7 @@ input[type=color] {
   visibility: visible;
   opacity: 1;
   top: 100px;
-  width: 70%;
+  width: 100%;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .main-menu nav ul li {

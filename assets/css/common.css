@@ -115,14 +115,14 @@
     letter-spacing: -0.8px;
     font-weight: 700;
     margin-bottom: 15px;
-    color: var(--common-black);
+    color: var(--st-common-black);
   }
   .offcanvas-title.sm {
     font-size: 20px;
     font-weight: 700;
     margin-bottom: 15px;
     text-transform: uppercase;
-    color: var(--common-black);
+    color: var(--st-common-black);
   }
   .offcanvas-gallery {
     margin-bottom: 65px;
@@ -153,7 +153,7 @@
     background-color: #1e1e1e;
   }
   .offcanvas-contact ul li a:hover {
-    color: var(--common-black);
+    color: var(--st-common-black);
   }
   .offcanvas-contact ul li a:hover::after {
     width: 100%;
@@ -181,14 +181,14 @@
     height: 40px;
     line-height: 38px;
     border-radius: 40px;
-    color: var(--common-black);
+    color: var(--st-common-black);
     border: 1px solid rgba(2, 11, 24, 0.1);
-    background-color: var(--common-white);
+    background-color: var(--st-common-white);
   }
   .offcanvas-social ul li a:hover {
-    background-color: var(--common-black);
-    border-color: var(--common-black);
-    color: var(--common-white);
+    background-color: var(--st-common-black);
+    border-color: var(--st-common-black);
+    color: var(--st-common-white);
   }
   .offcanvas-social ul li a svg {
     -webkit-transform: translateY(-1px);
@@ -309,7 +309,7 @@
 
 
   /* HEADER 3BAR BUTTON */
-  
+
   .header-3-menu-bar {
     line-height: 0;
   }

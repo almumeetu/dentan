@@ -61,3 +61,12 @@
       clip-path: inset(-2px 100% -2px 0);
     }
   }
+
+  @keyframes headerSlideDown {
+    0% {
+      margin-top: -150px;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
