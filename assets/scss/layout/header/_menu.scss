@@ -1,0 +1,24 @@
+@use '../../utils' as *;
+/*----------------------------------------*/
+/*  02. Main Menu CSS START HERE
+/*----------------------------------------*/
+
+ .main-menu{
+    nav{
+        ul{
+            li{
+                list-style: none;
+                a{
+                    float: left;
+                    text-align: center;
+                    padding: 0 12.5px;
+                    text-decoration: none;
+                    font-size: 15px;
+                    font-weight: 600;
+                    line-height: 22.55px;
+                    color: var(--st-heading-primar);
+                }
+            }
+        }
+    }
+ }
