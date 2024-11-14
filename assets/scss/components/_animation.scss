@@ -1,0 +1,39 @@
+@use '../utils'as *;
+
+
+/*----------------------------------------*/
+/*  03. Animations CSS START HERE
+/*----------------------------------------*/
+
+.animated-left-right {
+    position: relative;
+    animation: moveLeftRight 2s ease-in-out infinite;
+  }
+  
+  @keyframes moveLeftRight {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(15px); }
+    100% { transform: translateX(0); }
+  }
+
+  .animated-top-bottom {
+    position: relative;
+    animation: moveDiagonal 2s ease-in-out infinite;
+  }
+  
+  @keyframes moveDiagonal {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(15px); }
+    100% { transform: translateY(0); }   /* Back to original */
+  }
+
+  .animated-smooth {
+    position: relative;
+    animation: smoothAnimation 2s ease-in-out infinite;
+  }
+  
+  @keyframes smoothAnimation {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+    100% { transform: translateY(0); }   /* Back to original */
+  }

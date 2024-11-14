@@ -317,6 +317,21 @@ input[type="color"] {
     visibility: visible;
 }
 
+.offcanvas__area {
+    width: 300px;
+    height: 100%;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    right: -300px; /* Hidden initially */
+    transition: right 0.3s;
+    color: white;
+    padding: 20px;
+}
+.offcanvas__area.opened {
+    right: 0; /* Slide in when opened */
+}
+
 /*----------------------------------------
     Progress Wrap
 -----------------------------------------*/
