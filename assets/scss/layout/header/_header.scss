@@ -28,7 +28,7 @@
             justify-content: end;
             .search-icon{
                 padding-right: 25px;
-                @media #{$lg,$sm,$xs,$md}{
+                @media #{$lg,$xs}{
                     padding-right: 7px;
                 }
                 position: relative;
@@ -44,7 +44,7 @@
             }
             .sidebar-icon{
                 padding-left: 25px;
-                @media #{$lg,$sm,$xs,$md}{
+                @media #{$lg,$xs}{
                     padding-left: 10px;
                 }
             }

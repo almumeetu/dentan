@@ -81,6 +81,9 @@ h1 {
     font-size: var(--st-fz-h1);
     line-height: 75.1px;
     letter-spacing: -2.088px;
+    @media #{$xl}{
+        font-size: 65px;
+    }
     @media #{$lg,$md}{
         font-size: 50px;
         line-height: 60px;
