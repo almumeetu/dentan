@@ -7,6 +7,9 @@
 /*----------------------------------------*/
 .hero-area {
     .hero-content {
+        @media #{$md,$sm,$xs}{
+           padding-bottom: 50px;
+        }
         .hero-title {
             padding-bottom: 30px;
             margin: 0;
@@ -26,7 +29,18 @@
             background: var(--st-common-white);
             border-radius: 35px;
             width: 85%;
-
+            @media #{$lg,$xs}{
+                width: 100%;
+            }
+            @media #{$xss}{
+                gap: 10px;
+                flex-direction: column;
+            }
+            .location-options {
+                @media #{$xss}{
+                    align-items: flex-start !important;
+                }
+            }
             .location-icon {
                 i {
                     border: 1px solid var(--st-border-1);
@@ -64,7 +78,9 @@
 
     .hero-image-container {
         padding-top: 108px;
-
+        @media #{$md,$sm,$xs}{
+            padding: 50px 0;
+        }
         .star-overlay {
             right: -140px;
             top: 31%;
@@ -77,6 +93,9 @@
 
         .hero-left-img {
             justify-content: end;
+            @media #{$md,$sm,$xs}{
+                justify-content: center;
+            }
             img{
                 width: 100%;
             }
@@ -92,6 +111,9 @@
 
         .hero-phone-number {
             margin-left: 30px;
+            @media #{$xss}{
+                margin-left: 15px;
+            }
         }
 
         .hero-card {
@@ -101,7 +123,13 @@
             text-align: center;
             border-radius: 30px;
             width: 100%;
-
+            @media #{$xss}{
+                padding: 10px 5px;
+                margin-bottom: 15px;
+            }
+            @media #{$xs}{
+                padding: 10px 5px;
+            }
             .phone-icon {
                 width: 80px;
                 height: 80px;
@@ -112,41 +140,72 @@
                 border-radius: 50%;
                 font-size: 36px;
                 margin: 0 auto;
+                @media #{$xss}{
+                    width: 40px;
+                    height: 40px;
+                    font-size: 18px;
+                }
             }
 
             span {
                 padding-top: 20px;
                 display: block;
                 padding-bottom: 5px;
+                @media #{$xss}{
+                    padding-top: 5px;
+                    font-size: 14px;
+                    padding-bottom: 0;
+                }
             }
 
             h6 {
                 font-weight: 500;
+                @media #{$xss}{
+                    font-size: 16px;
+                    line-height: 16px;
+                }
             }
         }
 
         .heart-spaciallist {
             margin-top: 30px;
             padding: 15px 30px;
-
+            @media #{$xss}{
+                padding: 10px 5px;
+                margin-top: 15px;
+            }
             img {
                 max-width: 80px;
                 max-height: 80px;
                 border-radius: 50%;
+                @media #{$xss}{
+                    max-width: 40px;
+                    max-height: 40px;
+                }
             }
 
             h6 {
                 padding-top: 10px;
+                @media #{$xss}{
+                   margin-bottom: 0;
+                }
             }
 
             span {
                 padding: 0;
                 font-size: 16px;
                 line-height: 24px;
+                @media #{$xss}{
+                    font-size: 14px;
+                    line-height: 20px;
+                }
             }
 
             .card-social {
                 padding-top: 12px;
+                @media #{$xss}{
+                  padding-top: 5px;
+                }
 
                 ul {
                     li {

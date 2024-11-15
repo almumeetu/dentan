@@ -283,6 +283,12 @@ input[type="color"] {
     common classes css start 
 ---------------------------------*/
 
+.row-reverse-md{
+    @media #{$md,$sm,$xs}{
+      flex-direction: column-reverse;
+    }
+  }
+
 .w-img {
     & img {
         width: 100%;
