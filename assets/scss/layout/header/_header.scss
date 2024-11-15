@@ -14,7 +14,15 @@
         border-radius: 999px;
         padding: 20px 30px;
         .logo{
-            
+            img{
+                width: 150px;
+                @media #{$lg}{
+                    width: 120px;
+                }
+                @media #{$sm,$xs}{
+                    width: 120px;
+                }
+            }
         }
         .header-right{
             justify-content: end;
