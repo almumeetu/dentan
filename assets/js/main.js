@@ -84,5 +84,66 @@
 
 	////////////////////////////////////////////////////
 
+	// Accordion Plus or Minus btn toggle
+
+	$('.blog-accordion-button').on("click", function () {
+		const icon = $(this).find('.icon-toggle');
+		// Toggle icon based on collapse state
+		if ($(this).hasClass('collapsed')) {
+			icon.removeClass('fa-minus').addClass('fa-plus');
+		} else {
+			icon.removeClass('fa-plus').addClass('fa-minus');
+		}
+	});
+
+
+	////////////////////////////////////////////////////
+
+	//Service Details page faq area
+
+	// When a question is clicked, toggle the answer
+	$('.service-faq-item .question').on('click', function () {
+		var $this = $(this);
+		var $answer = $this.next('.answer');
+		var $icon = $this.closest('.service-faq-item').find('.faq-toggle-icon');
+		var $faqItem = $this.closest('.service-faq-item');
+
+		// Close all other answers except the current one
+		$('.service-faq-item .answer').not($answer).slideUp();
+		$('.service-faq-item .faq-toggle-icon').not($icon).removeClass('open').css('transform', 'rotate(0deg)');
+
+		var isActive = $faqItem.hasClass('active');
+		if (!isActive) {
+			$faqItem.toggleClass('active');
+		} else {
+			$faqItem.removeClass('active');
+		}
+
+		// Toggle the clicked answer
+		$answer.stop().slideToggle();
+		$icon.toggleClass('open').css('transform', function (_, val) {
+			return val === 'rotate(180deg)' ? 'rotate(0deg)' : 'rotate(180deg)';
+		});
+	});
+
+	// Ensure the first item is open when the page loads
+	$('.service-faq-item:first-child .answer').show();
+
+
+	//FAQ VeRSION - 2
+	$('.faq-toggle').each(function () {
+		$(this).on('click', function () {
+			$(this).parent().toggleClass('active');
+		});
+	});
+
+
+	////////////////////////////////////////////////////
+
+
+	//Progress Bar JS
+	var progress = 60;
+	$('.progress-bar').css('width', progress + '%');
+	$('.progress-text p').text(progress + '%');
 
 })(jQuery);

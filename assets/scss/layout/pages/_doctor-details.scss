@@ -1,0 +1,185 @@
+@use '../../utils' as *;
+
+.doctor-details {
+    .doctor-details-left-area {
+        .doctor-image {
+            max-width: 410px;
+            max-height: 410px;
+            border-radius: 50%;
+            overflow: hidden;
+            cursor: pointer;
+            &:hover{
+                .doctor-social-link{
+                    opacity: 1;
+                }
+            }
+            img {
+                width: 100%;
+                border-radius: 999px;
+               
+            }
+            .doctor-social-link {
+                opacity: 0;
+                transition: all ease-in-out .2s;
+                ul {
+                    list-style: none;
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+                    li {
+                        background-color: var(--st-common-white);
+                        border: 1px solid var(--st-common-black);
+                        border-radius: 999px;
+                        width: 35px;
+                        height: 35px;
+                        text-align: center;
+                        padding-top: 2px;
+                        cursor: pointer;
+                        i {
+                            font-size: 14px;
+                            line-height: 18.4px;
+                        }
+                    }
+                }
+            }
+        }
+        .doctor-profile {
+            position: relative;
+            .doctor-social-wrapper { 
+                width: 100%;
+                position: absolute;
+                bottom: 51px;
+            }
+        }
+        .doctor-schedule-wrapper {
+            margin: 40px 0;
+            padding: 40px;
+            border-radius: 20px;
+            background: var(--st-common-white);
+            box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+            .doctor-schedule-time {
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    tr {
+                        width: 100%;
+                        border-bottom: 1px solid var(--st-border-1);
+                        td {
+                            padding: 30px 0 10px 0;
+                        }
+                        .schedule-time {
+                            text-align: right;
+                            span {
+                                font-weight: var(--st-fw-sbold);
+                            }
+                            i {
+                                font-size: 16px;
+                                margin-left: 15px;
+                            }
+                            @media #{ $lg, $md}{
+                                display: flex;
+                                flex-direction: column-reverse;
+                            }
+                            @media (max-width: 379px){
+                                display: flex;
+                                flex-direction: column-reverse;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .doctor-details-right-area {
+        padding: 60px 0 0 30px;
+        @media #{$sm, $xs}{
+            padding: 0;
+        }
+        .doctor-info-intro{
+            h1{
+                margin-bottom: 10px;
+            }
+            p{
+                margin-bottom: 30px;
+            }
+        }
+        .doctor-experience {
+            display: flex;
+            flex-direction: row;
+            gap: 60px;
+            flex-wrap: wrap;
+            padding: 30px 0;
+            .experience-item {
+                display: flex;
+                gap: 20px;
+                flex-direction: row;
+                align-items: center;
+                svg {
+                    width: 50px;
+                    height: 50px;
+                }
+                .experience-text-wrapper {
+                    h2 {
+                        font-size: 33.4px;
+                        line-height: 33.41px;
+                        font-weight: 500;
+                        letter-spacing: -0.67px;
+                    }
+                    p { 
+                        margin: 0;
+                    }
+                }
+            }
+        }
+        .doctor-skills {
+            h3{
+                margin-top: 10px;
+                margin-bottom: 18px;
+            }
+            .doctor-skill-sets{
+                .skill-item{
+                    padding: 15px 0;
+                    h4{
+                        font-size: 20.9px;
+                        line-height: 29.24px;
+                        font-weight: 500;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            .progress-bar-wrapper {
+                .progress {
+                    position: relative;
+                    height: 5px;
+                    border-radius: 10px;
+                    overflow: visible !important;
+                    background-color: var(--st-grey-1);
+                    .progress-bar {
+                        background-color: var(--st-theme-primary);
+                        position: relative;
+                        overflow: visible !important; 
+                        border-radius: 10px; 
+                        transition: width 0.9s ease-in-out;
+                        .progress-text {
+                            position: absolute;
+                            right: 0px;
+                            top: -36px;
+                            color: var(--st-text-body);
+                            font-size: 20px;
+                            z-index: 999;
+                            @media #{$md, $sm, $xs}{
+                                top: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .doctor-biography{
+            padding-top: 25px;
+            h3{
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
