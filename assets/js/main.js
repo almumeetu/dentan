@@ -9,7 +9,7 @@
 	var windowOn = $(window);
 	////////////////////////////////////////////////////
 	// 01. PreLoader Js
-	windowOn.on('load',function() {
+	windowOn.on('load', function () {
 		$("#loading").fadeOut(500);
 	});
 
@@ -79,7 +79,7 @@
 	$('select').niceSelect();
 
 	////////////////////////////////////////////////////
-    //  Wow Js
+	//  Wow Js
 	new WOW().init();
 
 	////////////////////////////////////////////////////

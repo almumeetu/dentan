@@ -26,13 +26,20 @@
 /*  01. THEME DEFAULT CSS START
 /*----------------------------------------*/
 
-@import url($font-url);
-
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'HafferXH';
+    src: url(/assets/fonts/Haffer-normal-400-100.ttf) format('truetype'),
+    url(/assets/fonts/Haffer\ Medium-normal-500-100.ttf) format('truetype'),
+    url(/assets/fonts/Haffer\ SemiBold-normal-600-100.ttf) format('truetype'),
+    url(/assets/fonts/Haffer\ XH\ Medium-normal-500-100.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /*---------------------------------

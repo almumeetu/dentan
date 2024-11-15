@@ -6,67 +6,101 @@
 /*----------------------------------------*/
 
 .animated-left-right {
-    position: relative;
-    animation: moveLeftRight 2s ease-in-out infinite;
-  }
-  
-  @keyframes moveLeftRight {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(15px); }
-    100% { transform: translateX(0); }
+  position: relative;
+  animation: moveLeftRight 2s ease-in-out infinite;
+}
+
+@keyframes moveLeftRight {
+  0% {
+    transform: translateX(0);
   }
 
-  .animated-top-bottom {
-    position: relative;
-    animation: moveDiagonal 2s ease-in-out infinite;
-  }
-  
-  @keyframes moveDiagonal {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(15px); }
-    100% { transform: translateY(0); }   /* Back to original */
+  50% {
+    transform: translateX(15px);
   }
 
-  .animated-smooth {
-    position: relative;
-    animation: smoothAnimation 2s ease-in-out infinite;
+  100% {
+    transform: translateX(0);
   }
-  
-  @keyframes smoothAnimation {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(8px); }
-    100% { transform: translateY(0); }   /* Back to original */
+}
+
+.animated-top-bottom {
+  position: relative;
+  animation: moveDiagonal 2s ease-in-out infinite;
+}
+
+@keyframes moveDiagonal {
+  0% {
+    transform: translateY(0);
   }
 
-  @keyframes headerSlideDown {
-    0% {
-      margin-top: -150px;
-    }
-    100% {
-      margin-top: 0;
-    }
+  50% {
+    transform: translateY(15px);
   }
 
-  @keyframes bar_anim {
-    0%, 100% {
-      -webkit-clip-path: inset(-2px 0);
-      clip-path: inset(-2px 0);
-    }
-    42% {
-      -webkit-clip-path: inset(-2px 0 -2px 100%);
-      clip-path: inset(-2px 0 -2px 100%);
-    }
-    43% {
-      -webkit-clip-path: inset(-2px 100% -2px 0);
-      clip-path: inset(-2px 100% -2px 0);
-    }
+  100% {
+    transform: translateY(0);
   }
 
-  @keyframes headerSlideDown {
-    0% {
-      margin-top: -150px;
-    }
-    100% {
-      margin-top: 0;
-    }
+  /* Back to original */
+}
+
+.animated-smooth {
+  position: relative;
+  animation: smoothAnimation 2s ease-in-out infinite;
+}
+
+@keyframes smoothAnimation {
+  0% {
+    transform: translateY(0);
   }
+
+  50% {
+    transform: translateY(8px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+
+  /* Back to original */
+}
+
+@keyframes headerSlideDown {
+  0% {
+    margin-top: -150px;
+  }
+
+  100% {
+    margin-top: 0;
+  }
+}
+
+@keyframes bar_anim {
+
+  0%,
+  100% {
+    -webkit-clip-path: inset(-2px 0);
+    clip-path: inset(-2px 0);
+  }
+
+  42% {
+    -webkit-clip-path: inset(-2px 0 -2px 100%);
+    clip-path: inset(-2px 0 -2px 100%);
+  }
+
+  43% {
+    -webkit-clip-path: inset(-2px 100% -2px 0);
+    clip-path: inset(-2px 100% -2px 0);
+  }
+}
+
+@keyframes headerSlideDown {
+  0% {
+    margin-top: -150px;
+  }
+
+  100% {
+    margin-top: 0;
+  }
+}
