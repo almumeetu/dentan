@@ -77,6 +77,9 @@
 
         .hero-left-img {
             justify-content: end;
+            img{
+                width: 100%;
+            }
 
             .first-img {
                 max-width: 330px;
