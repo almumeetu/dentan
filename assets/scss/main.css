@@ -533,6 +533,14 @@ input[type=color] {
   padding: 120px 0;
 }
 
+.pt-120 {
+  padding-top: 120px;
+}
+
+.mt-120 {
+  margin-top: 120px;
+}
+
 .primary-btn {
   padding: 12.5px 30px;
   background: var(--st-theme-primary);
@@ -629,6 +637,15 @@ input[type=color] {
   text-transform: capitalize;
   text-align: center;
   padding-bottom: 60px;
+}
+
+.section-title-2 {
+  font-size: 53.5px;
+  font-weight: 500;
+  line-height: 50.8px;
+  letter-spacing: -1.169px;
+  text-transform: capitalize;
+  text-align: left;
 }
 
 /*----------------------------------------*/
@@ -986,6 +1003,175 @@ input[type=color] {
 .hero-area .hero-image-container .heart-spaciallist .card-social ul li a i {
   font-size: 16px;
   line-height: normal;
+}
+
+/*----------------------------------------*/
+/*  04. SERVICES CSS START HERE
+/*----------------------------------------*/
+.service-area .service-title-wrapper {
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 60px;
+}
+.service-area .service-title-wrapper .service-title {
+  margin-bottom: 0;
+}
+.service-area .service-wrapper .single-service .service {
+  width: 92%;
+}
+.service-area .service-wrapper .single-service .service::before {
+  position: absolute;
+  content: "";
+  width: 52px;
+  height: 52px;
+  background-color: var(--st-theme-secondary);
+  right: -35px;
+  top: 0;
+  border-radius: 50%;
+}
+.service-area .service-wrapper .single-service .service::after {
+  position: absolute;
+  content: "";
+  width: 34px;
+  height: 34px;
+  right: -25px;
+  top: 9px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34" fill="none"><g id="bi:arrow-left"><path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M9.60664 24.4247C9.74729 24.5653 9.93805 24.6444 10.137 24.6444C10.3359 24.6444 10.5266 24.5653 10.6673 24.4247L23.1757 11.9163L23.1746 18.5911C23.1746 18.6897 23.194 18.7873 23.2318 18.8784C23.2695 18.9695 23.3248 19.0523 23.3945 19.1221C23.4643 19.1918 23.5471 19.2471 23.6382 19.2848C23.7293 19.3226 23.8269 19.342 23.9255 19.342C24.0242 19.342 24.1218 19.3226 24.2129 19.2848C24.304 19.2471 24.3868 19.1918 24.4565 19.1221C24.5263 19.0523 24.5816 18.9695 24.6193 18.8784C24.6571 18.7873 24.6765 18.6897 24.6765 18.5911L24.6765 10.1058C24.6766 10.0071 24.6573 9.90942 24.6196 9.81826C24.5819 9.72709 24.5266 9.64426 24.4568 9.5745C24.3871 9.50475 24.3042 9.44944 24.2131 9.41174C24.1219 9.37405 24.0242 9.35471 23.9256 9.35483L15.4403 9.35483C15.3417 9.35483 15.244 9.37426 15.1529 9.412C15.0618 9.44973 14.979 9.50505 14.9093 9.57478C14.8395 9.64451 14.7842 9.7273 14.7465 9.81841C14.7087 9.90951 14.6893 10.0072 14.6893 10.1058C14.6893 10.2044 14.7087 10.302 14.7465 10.3932C14.7842 10.4843 14.8395 10.567 14.9093 10.6368C14.979 10.7065 15.0618 10.7618 15.1529 10.7996C15.244 10.8373 15.3417 10.8567 15.4403 10.8567L22.115 10.8557L9.60664 23.364C9.46599 23.5047 9.38697 23.6954 9.38697 23.8944C9.38697 24.0933 9.46599 24.284 9.60664 24.4247Z" fill="%231E1515"/></g></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.service-area .service-wrapper .single-service .service .p-absolute {
+  position: absolute;
+  top: 30px;
+  width: 80%;
+  left: 30px;
+}
+.service-area .service-wrapper .single-service .service .p-absolute .serive-heading {
+  align-items: center;
+  margin-bottom: 20px;
+}
+.service-area .service-wrapper .single-service .service .p-absolute .serive-heading .heading-icon {
+  width: 70px;
+  height: 70px;
+  background: #F9F8F5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.service-area .service-wrapper .single-service .service .p-absolute .service-content p {
+  color: var(--st-common-black);
+}
+
+/*----------------------------------------*/
+/*  05. ABOUT US CSS START HERE
+/*----------------------------------------*/
+.about-us-area .about-wrapper .about-content h2 {
+  padding-right: 50px;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+}
+.about-us-area .about-wrapper .about-content p {
+  padding-right: 20px;
+  padding-bottom: 30px;
+  margin-bottom: 0;
+}
+.about-us-area .about-wrapper .about-content .about-list .first-list ul li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 18px;
+}
+.about-us-area .about-wrapper .about-content .about-list .first-list ul li::after {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--st-theme-primary);
+  top: 5px;
+  left: 0;
+}
+.about-us-area .about-wrapper .about-content .about-list .second-list {
+  margin-left: 20px;
+}
+.about-us-area .about-wrapper .about-content .about-list .second-list ul li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+.about-us-area .about-wrapper .about-content .about-list .second-list ul li::after {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--st-theme-primary);
+  top: 5px;
+  left: 0;
+}
+.about-us-area .about-wrapper .about-content .about-btn-wrapper {
+  padding-top: 25PX;
+}
+.about-us-area .about-wrapper .about-content .about-btn-wrapper .massage-btn {
+  margin-left: 35px;
+}
+.about-us-area .about-wrapper .about-content .about-btn-wrapper .help-wrapper {
+  margin-left: 25px;
+}
+.about-us-area .about-wrapper .about-content .about-btn-wrapper .help-wrapper span {
+  font-size: 16px;
+}
+.about-us-area .about-wrapper .about-content .about-btn-wrapper .help-wrapper h6 {
+  font-size: 20.9px;
+  font-weight: 500;
+  line-height: 29.24px;
+}
+
+/*----------------------------------------*/
+/*  06. FASHION BLOG CSS START HERE
+/*----------------------------------------*/
+.fashion-blog-wrapper {
+  margin-top: 120px;
+}
+.fashion-blog-wrapper .fashion-blog-title {
+  padding: 120px 0 0 0;
+}
+.fashion-blog-wrapper .gray-fashion-blog {
+  background-color: var(--st-grey-1);
+  border-radius: 60px;
+}
+.fashion-blog-wrapper .single-fashion-blog {
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+.fashion-blog-wrapper .single-fashion-blog .fashion-blog-img {
+  width: 100%;
+}
+.fashion-blog-wrapper .single-fashion-blog .fashion-body {
+  padding: 13px;
+  border-radius: 20px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.95));
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+.fashion-blog-wrapper .single-fashion-blog .fashion-body .fashion-title {
+  color: var(--st-common-black);
+  font-size: 29.1px;
+  padding-bottom: 20px;
+}
+.fashion-blog-wrapper .tags .badge {
+  background-color: var(--st-theme-secondary);
+  color: var(--st-common-black);
+  border-radius: 20px;
+  font-weight: 400;
+  padding: 10px 15px 10px 15px;
 }
 
 /*----------------------------------------*/
@@ -1512,7 +1698,6 @@ input[type=color] {
   padding-top: 30px;
   background-repeat: no-repeat;
   background-position: bottom right;
-  overflow: hidden;
 }
 .header-area .header-navigation {
   background: var(--st-common-white);
