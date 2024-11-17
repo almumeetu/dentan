@@ -277,11 +277,22 @@
 /*----------------------------------------*/
 
 .service-area {
+    padding: 100px 0;
+    @media #{$md}{
+        padding: 60px 0;
+        padding: 60px 0;
+    }
+    @media #{$sm,$xs}{
+        padding: 30px 0;
+    }
     .service-title-wrapper {
         justify-content: space-between;
         align-items: center;
         padding-bottom: 60px;
-
+        @media #{$xs}{
+           flex-direction: column;
+           gap: 18px;
+        }
         .service-title {
             margin-bottom: 0;
         }
@@ -289,49 +300,94 @@
 
     .service-wrapper {
         .single-service {
+            .service-overlay-icon{
+                a{
+                    width: 56px;
+                    height: 56px;
+                    background: var(--st-grey-1);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    right: 3px;
+                    top: -20px;
+                    border: 1px solid var(--st-border-1);
+                    &:hover{
+                        background-color: var(--st-theme-secondary);
+                    }
+                    z-index: 9;
+                }
+            }
             .service {
                 border: 1px solid var(--st-border-1);
                 padding: 20px 30px;
-                border-radius: 20px;  
+                border-radius: 15px;  
                 width: 95%;
-                &:hover .service-overlay-icon a {
-                    background-color: var(--st-theme-secondary);
+                z-index: 1;
+                transition: all ease-in-out .4s;
+                @media #{$xl}{
+                    padding: 20px 18px;
                 }
-                &:hover .serive-heading > .heading-icon{
-                    background: var(--st-theme-secondary);
+                @media #{$md,$xss}{
+                    padding: 14px 15px;
                 }
-                .service-overlay-icon{
-                    a{
-                        width: 56px;
-                        height: 56px;
-                        background: var(--st-grey-1);
-                        border-radius: 50%;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        position: absolute;
-                        right: -15px;
-                        top: -15px;
-                    }
+                &:hover{
+                    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                    border-color: var(--st-theme-primary);
+                }
+                &:hover > .serive-heading > .heading-icon::before{
+                    top: 0;
                 }
                 .serive-heading{
                     align-items: center;
                     margin-bottom: 20px;
+                    h4{
+                        @media #{$md,$xss}{
+                           font-size: 24px;
+                           line-height: 30px;
+                        }
+                    }
                     .heading-icon{
+                        @media #{$md,$xss}{
+                            width: 60px;
+                            height: 60px;
+                        }
                         width: 70px;
                         height: 70px;
                         background: #F9F8F5;
                         display: flex;
+                        position: relative;
                         justify-content: center;
                         align-items: center;
                         border-radius: 50%;
                         margin-right: 15px;
-                        transition: all ease-in-out .3s;
+                        transition: all ease-in-out .5s;
+                        overflow: hidden;
+                        -webkit-transition: all ease .5s;
+                        -moz-transition: all ease .5s;
+                        -ms-transition: all ease .5s;
+                        -o-transition: all ease .5s;
+                        z-index: 1;
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            top: -100%;
+                            left: 0; 
+                            width: 100%;
+                            height: 100%;
+                            background-color: var(--st-theme-primary); 
+                            transition: all 0.4s ease;
+                            z-index: -1; 
+                        }
                     }
                 }
                 .service-content{
                     p{
                         color: var(--st-common-black);
+                        @media #{$md,$xss}{
+                            font-size: 16px;
+                        }
                     }
                 }
                 .p-absolute{
@@ -354,6 +410,9 @@
 .about-us-area{
     .about-wrapper{
         .about-content{
+            @media #{$xs,$sm,$md}{
+                padding-top: 30px;
+            }
             h2{
                 padding-right: 50px;
                 padding-bottom: 20px;
@@ -365,6 +424,9 @@
                 margin-bottom: 0;
             }
             .about-list{
+                @media #{$xss}{
+                    flex-direction: column;
+                }
                 .first-list{
                     ul{
                         li{
@@ -386,6 +448,9 @@
                 }
                 .second-list{
                     margin-left: 20px;
+                    @media #{$xss}{
+                        margin-left: 0;
+                    }
                     ul{
                         li{
                             position: relative;
@@ -406,7 +471,11 @@
                 }
             }
             .about-btn-wrapper{
-                padding-top: 25PX;
+                padding-top: 25px;
+                @media #{$xss}{
+                    flex-direction: column-reverse;
+                    gap: 20px;
+                }
                 .massage-btn{
                     margin-left: 35px;
                 }

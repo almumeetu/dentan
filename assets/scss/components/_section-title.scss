@@ -8,6 +8,14 @@
     text-transform: capitalize;
     text-align: center;
     padding-bottom: 60px;
+    @media #{$lg,$md}{
+        font-size: 48px;
+        line-height: 55px;
+    }
+    @media #{$sm,$xs}{
+        font-size: 37px;
+        line-height: 45px;
+    }
 }
 .section-title-2{
     font-size: 53.5px;
@@ -16,4 +24,12 @@
     letter-spacing: -1.169px;
     text-transform: capitalize;
     text-align: left;
+    @media #{$lg,$md}{
+        font-size: 48px;
+        line-height: 55px;
+    }
+    @media #{$sm,$xs}{
+        font-size: 37px;
+        line-height: 45px;
+    }
 }
