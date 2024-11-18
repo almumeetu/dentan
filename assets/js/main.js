@@ -147,6 +147,8 @@
 
 })(jQuery);
 
+
+
 	//Magic Mouse Js
 	options = {
 		"cursorOuter": "circle",
@@ -157,3 +159,31 @@
 		"outerHeight": 30
 		  };
 	 magicMouse(options);
+
+
+	 //Testimonial Swiper
+	 var swiper = new Swiper(".mySwiper", {
+		slidesPerView: 3,
+		spaceBetween: 30,
+		loop: true, // Ensures continuous looping
+		autoplay: {
+		  delay: 2000, // Removes delay for continuous movement
+		  disableOnInteraction: false, // Keeps autoplay active on interaction
+		},
+		speed: 3000, // Controls autoplay smoothness
+		pagination: {
+		  el: ".swiper-pagination",
+		  clickable: true,
+		},
+		breakpoints: {
+		  // For tablets (width < 1024px)
+		  1024: {
+			slidesPerView: 2,
+		  },
+		  // For mobile devices (width < 768px)
+		  768: {
+			slidesPerView: 1,
+		  },
+		},
+	  });
+	  

@@ -672,18 +672,18 @@
         background-color: var(--st-theme-secondary);
         border-radius: 60px;
         padding: 120px 0 90px 0;
+        @media #{$md} {
+            padding: 80px 0 60px 0;
+          }
+        @media #{$sm,$xs} {
+            padding: 48px 0 28px 0;
+          }
+
 
         @media #{$lg} {
             padding: 80px 0 50px 0;
         }
 
-        @media #{$md} {
-            padding: 48px 0 18px 0;
-        }
-
-        @media #{$sm,$xs} {
-            padding: 40px 0 10px 0;
-        }
 
         @media #{$lg,$md,$sm,$xs} {
             border-radius: 30px;
@@ -702,12 +702,9 @@
                 }
 
                 @media #{$sm,$xs} {
-                    padding: 0 0 16px 0;
+                    padding: 5px 0 20px 5px;
                 }
 
-                @media #{$xss} {
-                    padding: 0 0 16px 0;
-                }
             }
         }
 
@@ -761,6 +758,9 @@
             padding-top: 20px;
 
             .report-wrapper {
+                @media #{$xs,$sm,$md} {
+                   padding-top: 30px;
+                }
                 .report-title {
                     margin-bottom: 30px;
                 }
@@ -781,6 +781,9 @@
                         height: 1px;
                         background: var(--st-border-1);
                         bottom: 0;
+                        @media #{$xss} {
+                            width: 265px;
+                          }
                     }
                 }
 
@@ -792,6 +795,9 @@
                         height: 1px;
                         background: var(--st-border-1);
                         bottom: -10px;
+                        @media #{$xss} {
+                            width: 265px;
+                          }
                     }
                 }
 
@@ -818,10 +824,17 @@
                     .text {
                         a {
                             h6 {
-                                font-weight: 600;
+                                font-weight: 500;
+                                @media #{$xss} {
+                                    font-size: 18px;
+                                  }
 
                                 span {
                                     display: block;
+                                    @media #{$xss} {
+                                      font-size: 16px;
+                                      line-height: 18px;
+                                      }
                                 }
                             }
                         }
@@ -831,10 +844,16 @@
         }
 
         .home-appiontment-form {
+            @media #{$xs,$sm,$md} {
+                padding-top: 60px;
+             }
             .appointment-form-wrapper {
                 padding: 40px;
                 border-radius: 20px;
                 border: 2px solid var(--st-common-white);
+                @media #{$xss} {
+                  padding: 25px 12px;
+                  }
 
                 h2 {
                     margin-bottom: 40px;
@@ -842,6 +861,9 @@
 
                 .appointment-form {
                     p {
+                        @media #{$xss} {
+                          flex-direction: column;
+                        }
                         display: flex;
                         gap: 30px;
                         flex-direction: row;
@@ -850,6 +872,9 @@
                         input[type="text"],
                         input[type="email"] {
                             width: 50%;
+                            @media #{$xss} {
+                                width: 100%;
+                              }
                         }
 
                         input[type="textarea"],
