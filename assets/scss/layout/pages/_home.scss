@@ -758,6 +758,8 @@
         }
 
         .report-appiontment-wrapper {
+            padding-top: 20px;
+
             .report-wrapper {
                 .report-title {
                     margin-bottom: 30px;
@@ -768,10 +770,11 @@
                     padding-bottom: 40px;
                 }
 
-                .number-report{
+                .number-report {
                     padding-bottom: 15px;
                     margin-bottom: 20px;
-                    &::after{
+
+                    &::after {
                         position: absolute;
                         content: '';
                         width: 320px;
@@ -780,8 +783,9 @@
                         bottom: 0;
                     }
                 }
-                .location-report{
-                    &::after{
+
+                .location-report {
+                    &::after {
                         position: absolute;
                         content: '';
                         width: 320px;
@@ -790,10 +794,12 @@
                         bottom: -10px;
                     }
                 }
+
                 .repo-msg {
                     display: flex;
                     align-items: center;
                     position: relative;
+
                     .icon {
                         display: flex;
                         align-items: center;
@@ -813,7 +819,8 @@
                         a {
                             h6 {
                                 font-weight: 600;
-                                span{
+
+                                span {
                                     display: block;
                                 }
                             }
@@ -822,38 +829,51 @@
                 }
             }
         }
-        .home-appiontment-form{
-            .appointment-form-wrapper{
+
+        .home-appiontment-form {
+            .appointment-form-wrapper {
                 padding: 40px;
                 border-radius: 20px;
                 border: 2px solid var(--st-common-white);
-                h2{
+
+                h2 {
                     margin-bottom: 40px;
                 }
-                .appointment-form{
-                    p{
+
+                .appointment-form {
+                    p {
                         display: flex;
                         gap: 30px;
                         flex-direction: row;
                         margin-bottom: 30px;
-                        input[type = "text"],input[type = "email"]{
+
+                        input[type="text"],
+                        input[type="email"] {
                             width: 50%;
                         }
-                        input[type = "textarea"], .nice-select, a{
+
+                        input[type="textarea"],
+                        .nice-select,
+                        a {
                             width: 100%;
                         }
-                        .nice-select{
-                            .list{
+
+                        .nice-select {
+                            .list {
                                 width: 100%;
                                 border-radius: 20px;
                                 background-color: var(--st-grey-1);
                             }
                         }
-                        a{
+
+                        a {
                             text-align: center;
                             margin-top: 10px;
                         }
-                        input, .nice-select, textarea{
+
+                        input,
+                        .nice-select,
+                        textarea {
                             width: 100%;
                             border-radius: 999px;
                             display: block;
@@ -866,41 +886,48 @@
                             -moz-appearance: none;
                             appearance: none;
                             transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-                            &:focus{
+
+                            &:focus {
                                 color: #212529;
                                 border-color: var(--st-grey-1);
                                 outline: 0;
                                 box-shadow: 0 0 0 .05rem var(--st-theme-primary);
                             }
-                            &::placeholder{
+
+                            &::placeholder {
                                 color: var(--st-text-body);
                                 font-size: 16px;
                                 line-height: 24px;
                             }
                         }
-                        textarea{
+
+                        textarea {
                             border-radius: 20px;
                             font-size: 16px;
                             line-height: 24px;
                             height: 100px;
                             width: 100%;
-                            &::placeholder{
+
+                            &::placeholder {
                                 color: var(--st-text-body);
                                 font-size: 16px;
                                 line-height: 24px;
                             }
                         }
-                        sider-quick-compose-btn{
+
+                        sider-quick-compose-btn {
                             display: none;
                         }
-                        .nice-select{
+
+                        .nice-select {
                             font-size: 16px;
                             line-height: 24px;
                             padding: 8px 30px;
                             height: 54px;
                             display: flex;
                             align-items: center;
-                            &::after{
+
+                            &::after {
                                 right: 20px;
                                 font-size: 10px;
                                 top: 50%;
@@ -908,8 +935,9 @@
                             }
                         }
                     }
-                    .submit-btn{
-                       margin: 10px 0 0 0;
+
+                    .submit-btn {
+                        margin: 10px 0 0 0;
                     }
                 }
             }
