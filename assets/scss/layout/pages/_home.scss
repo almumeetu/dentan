@@ -102,9 +102,11 @@
 
     .hero-image-container {
         padding-top: 108px;
+
         @media #{$md,$sm,$xs} {
             padding: 50px 0;
         }
+
         @media #{$md,$sm,$xs,$lg,$xl} {
             overflow: hidden;
         }
@@ -278,21 +280,26 @@
 
 .service-area {
     padding: 100px 0;
-    @media #{$md}{
+
+    @media #{$md} {
         padding: 60px 0;
         padding: 60px 0;
     }
-    @media #{$sm,$xs}{
+
+    @media #{$sm,$xs} {
         padding: 30px 0;
     }
+
     .service-title-wrapper {
         justify-content: space-between;
         align-items: center;
         padding-bottom: 60px;
-        @media #{$xs}{
-           flex-direction: column;
-           gap: 18px;
+
+        @media #{$xs} {
+            flex-direction: column;
+            gap: 18px;
         }
+
         .service-title {
             margin-bottom: 0;
         }
@@ -300,8 +307,8 @@
 
     .service-wrapper {
         .single-service {
-            .service-overlay-icon{
-                a{
+            .service-overlay-icon {
+                a {
                     width: 56px;
                     height: 56px;
                     background: var(--st-grey-1);
@@ -313,46 +320,57 @@
                     right: 3px;
                     top: -20px;
                     border: 1px solid var(--st-border-1);
-                    &:hover{
+
+                    &:hover {
                         background-color: var(--st-theme-secondary);
                     }
+
                     z-index: 9;
                 }
             }
+
             .service {
                 border: 1px solid var(--st-border-1);
                 padding: 20px 30px;
-                border-radius: 15px;  
+                border-radius: 15px;
                 width: 95%;
                 z-index: 1;
                 transition: all ease-in-out .4s;
-                @media #{$xl}{
+
+                @media #{$xl} {
                     padding: 20px 18px;
                 }
-                @media #{$md,$xss}{
+
+                @media #{$md,$xss} {
                     padding: 14px 15px;
                 }
-                &:hover{
+
+                &:hover {
                     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
                     border-color: var(--st-theme-primary);
                 }
-                &:hover > .serive-heading > .heading-icon::before{
+
+                &:hover>.serive-heading>.heading-icon::before {
                     top: 0;
                 }
-                .serive-heading{
+
+                .serive-heading {
                     align-items: center;
                     margin-bottom: 20px;
-                    h4{
-                        @media #{$md,$xss}{
-                           font-size: 24px;
-                           line-height: 30px;
+
+                    h4 {
+                        @media #{$md,$xss} {
+                            font-size: 24px;
+                            line-height: 30px;
                         }
                     }
-                    .heading-icon{
-                        @media #{$md,$xss}{
+
+                    .heading-icon {
+                        @media #{$md,$xss} {
                             width: 60px;
                             height: 60px;
                         }
+
                         width: 70px;
                         height: 70px;
                         background: #F9F8F5;
@@ -369,28 +387,32 @@
                         -ms-transition: all ease .5s;
                         -o-transition: all ease .5s;
                         z-index: 1;
-                        &::before{
+
+                        &::before {
                             content: "";
                             position: absolute;
                             top: -100%;
-                            left: 0; 
+                            left: 0;
                             width: 100%;
                             height: 100%;
-                            background-color: var(--st-theme-primary); 
+                            background-color: var(--st-theme-primary);
                             transition: all 0.4s ease;
-                            z-index: -1; 
+                            z-index: -1;
                         }
                     }
                 }
-                .service-content{
-                    p{
+
+                .service-content {
+                    p {
                         color: var(--st-common-black);
-                        @media #{$md,$xss}{
+
+                        @media #{$md,$xss} {
                             font-size: 16px;
                         }
                     }
                 }
-                .p-absolute{
+
+                .p-absolute {
                     position: absolute;
                     top: 30px;
                     width: 80%;
@@ -407,33 +429,38 @@
 /*  05. ABOUT US CSS START HERE
 /*----------------------------------------*/
 
-.about-us-area{
-    .about-wrapper{
-        .about-content{
-            @media #{$xs,$sm,$md}{
+.about-us-area {
+    .about-wrapper {
+        .about-content {
+            @media #{$xs,$sm,$md} {
                 padding-top: 30px;
             }
-            h2{
+
+            h2 {
                 padding-right: 50px;
                 padding-bottom: 20px;
                 margin-bottom: 0;
             }
-            p{
+
+            p {
                 padding-right: 20px;
                 padding-bottom: 30px;
                 margin-bottom: 0;
             }
-            .about-list{
-                @media #{$xss}{
+
+            .about-list {
+                @media #{$xss} {
                     flex-direction: column;
                 }
-                .first-list{
-                    ul{
-                        li{
+
+                .first-list {
+                    ul {
+                        li {
                             position: relative;
                             padding-left: 30px;
                             margin-bottom: 18px;
-                            &::after{
+
+                            &::after {
                                 position: absolute;
                                 content: '';
                                 width: 16px;
@@ -446,17 +473,21 @@
                         }
                     }
                 }
-                .second-list{
+
+                .second-list {
                     margin-left: 20px;
-                    @media #{$xss}{
+
+                    @media #{$xss} {
                         margin-left: 0;
                     }
-                    ul{
-                        li{
+
+                    ul {
+                        li {
                             position: relative;
                             padding-left: 30px;
                             margin-bottom: 20px;
-                            &::after{
+
+                            &::after {
                                 position: absolute;
                                 content: '';
                                 width: 16px;
@@ -470,21 +501,27 @@
                     }
                 }
             }
-            .about-btn-wrapper{
+
+            .about-btn-wrapper {
                 padding-top: 25px;
-                @media #{$xss}{
+
+                @media #{$xss} {
                     flex-direction: column-reverse;
                     gap: 20px;
                 }
-                .massage-btn{
+
+                .massage-btn {
                     margin-left: 35px;
                 }
-                .help-wrapper{
+
+                .help-wrapper {
                     margin-left: 25px;
-                    span{
+
+                    span {
                         font-size: 16px;
                     }
-                    h6{
+
+                    h6 {
                         font-size: 20.9px;
                         font-weight: 500;
                         line-height: 29.24px;
@@ -500,45 +537,311 @@
 /*----------------------------------------*/
 /*  06. FASHION BLOG CSS START HERE
 /*----------------------------------------*/
+
 .fashion-blog-wrapper {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin: 120px 5%;
+
+    @media #{$lg,$md} {
+        margin: 80px 3%;
+    }
+
+    @media #{$sm,$xs} {
+        margin: 50px 2%;
+    }
+
     .gray-fashion-blog {
         background-color: var(--st-grey-1);
         border-radius: 60px;
-    }
-    .single-fashion-blog {
-        border: none;
-        border-radius: 20px;
-        overflow: hidden;
-        transition: transform 0.3s ease;
-        position: relative;
-        .fashion-blog-img {
-            width: 100%;
+        padding: 120px 0 90px 0;
+
+        @media #{$lg} {
+            padding: 80px 0 50px 0;
         }
-        .fashion-body {
-            padding: 13px;
+
+        @media #{$md} {
+            padding: 48px 0 18px 0;
+        }
+
+        @media #{$sm,$xs} {
+            padding: 40px 0 10px 0;
+        }
+
+        @media #{$lg,$md,$sm,$xs} {
+            border-radius: 30px;
+        }
+
+        .fashion-blog-title {
+            h2 {
+                padding: 0 30px 60px 30px;
+
+                @media #{$lg} {
+                    padding: 0 20px 40px 20px;
+                }
+
+                @media #{$md} {
+                    padding: 0 20px 24px 20px;
+                }
+
+                @media #{$sm,$xs} {
+                    padding: 0 20px 16px 20px;
+                }
+
+                @media #{$xss} {
+                    padding: 0 0 16px 0;
+                }
+            }
+        }
+
+        .single-fashion-blog {
+            border: none;
             border-radius: 20px;
-            background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.95));
-            position: absolute;
-            bottom: 0%;
-            width: 100%;
-            left: 0;
-            right: 0;
-            .fashion-title {
-                color: var(--st-common-black);
-                font-size: 29.1px;
-                padding-bottom: 20px;
+            transition: transform 0.3s ease;
+
+            .fashion-blog-img {
+                position: relative;
+                border-radius: 20px;
+
+                img {
+                    width: 100%;
+                    border-radius: 20px;
+                }
+
+                .fashion-body {
+                    padding: 45px 30px 30px 30px;
+                    border-radius: 20px;
+                    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0.04%, rgba(255, 255, 255, 0.95) 38.07%);
+                    position: absolute;
+                    bottom: 0%;
+                    width: 100%;
+                    left: 0;
+                    right: 0;
+
+                    @media #{$md,$sm,$xs} {
+                        padding: 20px 10px;
+                    }
+
+                    .fashion-title {
+                        color: var(--st-common-black);
+                        font-size: 29.1px;
+                        padding-bottom: 20px;
+                        margin: 0;
+
+                        @media #{$md,$sm,$xs} {
+                            font-size: 24px;
+                            line-height: 24px;
+                        }
+                    }
+
+                    .tags {
+                        .tags-badge {
+                            background-color: var(--st-theme-secondary);
+                            color: var(--st-common-black);
+                            border-radius: 20px;
+                            font-weight: 400;
+                            padding: 6px 15px;
+                            font-size: 18.4px;
+                            line-height: 27.56px;
+
+                            @media #{$md,$sm,$xs} {
+                                font-size: 14px;
+                                line-height: 24px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
-.tags {
-    .badge{
-            background-color: var(--st-theme-secondary);
-            color: var(--st-common-black);
-            border-radius: 20px;
-            font-weight: 400;
-            padding: 10px 15px 10px 15px;
+}
+
+/*----------------------------------------*/
+/*  07. TESTIMONIAL CSS START HERE
+/*----------------------------------------*/
+.testimonial-area {
+    margin: 0 5%;
+
+    @media #{$lg,$md} {
+        margin: 0 3%;
+    }
+
+    @media #{$sm,$xs} {
+        margin: 0 2%;
+    }
+
+    .testimonial-bg-wrapper {
+        background-color: var(--st-theme-secondary);
+        border-radius: 60px;
+        padding: 120px 0 90px 0;
+
+        @media #{$lg} {
+            padding: 80px 0 50px 0;
+        }
+
+        @media #{$md} {
+            padding: 48px 0 18px 0;
+        }
+
+        @media #{$sm,$xs} {
+            padding: 40px 0 10px 0;
+        }
+
+        @media #{$lg,$md,$sm,$xs} {
+            border-radius: 30px;
+        }
+
+        .testimonial-wrapper-title {
+            h2 {
+                padding: 0 0 60px 0;
+
+                @media #{$lg} {
+                    padding: 0 0 40px 0;
+                }
+
+                @media #{$md} {
+                    padding: 0 0 24px 0;
+                }
+
+                @media #{$sm,$xs} {
+                    padding: 0 0 16px 0;
+                }
+
+                @media #{$xss} {
+                    padding: 0 0 16px 0;
+                }
+            }
+        }
+
+        .testimonial-wrapper {
+            padding-top: 50px;
+
+            .testimonial {
+                padding: 30px;
+                border-radius: 20px;
+                background: var(--st-common-white);
+
+                .testimonial-img {
+                    max-width: 100px;
+                    max-height: 100px;
+                    border-radius: 50%;
+                    margin: -80px auto 20px auto;
+
+                    img {
+                        width: 100%;
+                        border-radius: 50%;
+                    }
+                }
+
+                .client-author {
+                    background: url('/assets/img/clients/bg-shadow.png');
+                    background-repeat: no-repeat;
+                    background-position: top center;
+                    background-size: contain;
+
+                    h5 {
+                        margin: 0;
+                    }
+
+                    span {
+                        font-size: 16px;
+                        line-height: 24px;
+                        display: inline-block;
+                        padding-bottom: 20px;
+                    }
+                }
+
+                .client-description {
+                    margin: 0;
+                    padding-bottom: 20px;
+                }
+
+            }
+        }
+
+        .report-appiontment-wrapper {
+            .report-wrapper {
+                .report-title {
+                    margin-bottom: 30px;
+                }
+
+                p {
+                    margin: 0;
+                    padding-bottom: 40px;
+                }
+
+                .number-report{
+                    padding-bottom: 15px;
+                    margin-bottom: 20px;
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        width: 320px;
+                        height: 1px;
+                        background: var(--st-border-1);
+                        bottom: 0;
+                    }
+                }
+                .location-report{
+                    &::after{
+                        position: absolute;
+                        content: '';
+                        width: 320px;
+                        height: 1px;
+                        background: var(--st-border-1);
+                        bottom: -10px;
+                    }
+                }
+                .repo-msg {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    .icon {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        background: var(--st-common-white);
+                        margin-right: 18px;
+
+                        i {
+                            font-size: 24px;
+                        }
+                    }
+
+                    .text {
+                        a {
+                            h6 {
+                                font-weight: 600;
+                                span{
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//Reiews ICON
+.client-reviews {
+    ul {
+        justify-content: center;
+        align-items: center;
+
+        li {
+            margin-right: 8px;
+
+            a {
+                margin: 0;
+                padding: 0;
+
+                i {
+                    color: #FFA336;
+                }
+            }
         }
     }
 }

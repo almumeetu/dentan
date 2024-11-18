@@ -16,6 +16,10 @@
         font-size: 37px;
         line-height: 45px;
     }
+    @media #{$xss}{
+        font-size: 32px;
+        line-height: 35px;
+    }
 }
 .section-title-2{
     font-size: 53.5px;
@@ -31,5 +35,9 @@
     @media #{$sm,$xs}{
         font-size: 37px;
         line-height: 45px;
+    }
+    @media #{$xss}{
+        font-size: 32px;
+        line-height: 35px;
     }
 }
