@@ -822,6 +822,98 @@
                 }
             }
         }
+        .home-appiontment-form{
+            .appointment-form-wrapper{
+                padding: 40px;
+                border-radius: 20px;
+                border: 2px solid var(--st-common-white);
+                h2{
+                    margin-bottom: 40px;
+                }
+                .appointment-form{
+                    p{
+                        display: flex;
+                        gap: 30px;
+                        flex-direction: row;
+                        margin-bottom: 30px;
+                        input[type = "text"],input[type = "email"]{
+                            width: 50%;
+                        }
+                        input[type = "textarea"], .nice-select, a{
+                            width: 100%;
+                        }
+                        .nice-select{
+                            .list{
+                                width: 100%;
+                                border-radius: 20px;
+                                background-color: var(--st-grey-1);
+                            }
+                        }
+                        a{
+                            text-align: center;
+                            margin-top: 10px;
+                        }
+                        input, .nice-select, textarea{
+                            width: 100%;
+                            border-radius: 999px;
+                            display: block;
+                            padding: 13px 30px;
+                            color: var(--st-text-body);
+                            background-color: transparent;
+                            background-clip: padding-box;
+                            border: 1px solid #E1CEBC;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            appearance: none;
+                            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+                            &:focus{
+                                color: #212529;
+                                border-color: var(--st-grey-1);
+                                outline: 0;
+                                box-shadow: 0 0 0 .05rem var(--st-theme-primary);
+                            }
+                            &::placeholder{
+                                color: var(--st-text-body);
+                                font-size: 16px;
+                                line-height: 24px;
+                            }
+                        }
+                        textarea{
+                            border-radius: 20px;
+                            font-size: 16px;
+                            line-height: 24px;
+                            height: 100px;
+                            width: 100%;
+                            &::placeholder{
+                                color: var(--st-text-body);
+                                font-size: 16px;
+                                line-height: 24px;
+                            }
+                        }
+                        sider-quick-compose-btn{
+                            display: none;
+                        }
+                        .nice-select{
+                            font-size: 16px;
+                            line-height: 24px;
+                            padding: 8px 30px;
+                            height: 54px;
+                            display: flex;
+                            align-items: center;
+                            &::after{
+                                right: 20px;
+                                font-size: 10px;
+                                top: 50%;
+                                color: var(--st-theme-primary);
+                            }
+                        }
+                    }
+                    .submit-btn{
+                       margin: 10px 0 0 0;
+                    }
+                }
+            }
+        }
     }
 }
 
