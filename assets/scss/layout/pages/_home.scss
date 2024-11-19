@@ -600,6 +600,25 @@
             .fashion-blog-img {
                 position: relative;
                 border-radius: 20px;
+                overflow: hidden;
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: -75%;
+                    z-index: 2;
+                    display: block;
+                    content: '';
+                    width: 50%;
+                    height: 100%;
+                    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+                    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+                    -webkit-transform: skewX(-25deg);
+                    transform: skewX(-25deg);
+                }
+                &:hover::before{
+                    -webkit-animation: shine 1s;
+                    animation: shine 1s;
+                }
 
                 img {
                     width: 100%;
@@ -724,7 +743,7 @@
                     max-height: 100px;
                     border-radius: 50%;
                     margin: -80px auto 20px auto;
-
+       
                     img {
                         width: 100%;
                         border-radius: 50%;
@@ -1053,7 +1072,25 @@
                 position: relative;
                 transition: all 0.3s ease-in-out;
                 border-radius: 20px;
-
+                overflow: hidden;
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: -75%;
+                    z-index: 2;
+                    display: block;
+                    content: '';
+                    width: 50%;
+                    height: 100%;
+                    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+                    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+                    -webkit-transform: skewX(-25deg);
+                    transform: skewX(-25deg);
+                }
+                &:hover::before{
+                    -webkit-animation: shine 1s;
+                    animation: shine 1s;
+                }
                 img {
                     width: 100%;
                 }
@@ -1156,8 +1193,31 @@
             .blog-img{
                 position: relative;
                 border-radius: 20px;
+                overflow: hidden;
+                &::before {
+                    position: absolute;
+                    top: 0;
+                    left: -75%;
+                    z-index: 2;
+                    display: block;
+                    content: '';
+                    width: 50%;
+                    height: 100%;
+                    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+                    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+                    -webkit-transform: skewX(-25deg);
+                    transform: skewX(-25deg);
+                }
+                &:hover::before{
+                    -webkit-animation: shine 1s;
+                    animation: shine 1s;
+                }
+                &:hover img{
+                    transform: scale(1.1);
+                }
                 img{
                     width: 100%;
+                    transition: transform 1s ease-in-out;
                 }
                 margin-bottom: 20px;
                 .blog-overlay-icon{
