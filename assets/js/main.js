@@ -144,6 +144,47 @@
 	$('.progress-bar').css('width', progress + '%');
 	$('.progress-text p').text(progress + '%');
 
+	
+	////////////////////////////////////////////////////
+	//Service Details Page FAQ
+	let $questions = $(".faq-question");
+	let $containers = $(".faq-container");
+
+	// Set the first question as open by default
+	if ($questions.length > 0) {
+		$questions.first().addClass("active");
+		$containers.first().addClass("active");
+		$questions.first().next().css("max-height", $questions.first().next()[0].scrollHeight + "px");
+	}
+
+	$questions.on("click", function() {
+		var $question = $(this);
+		var $activeQuestion = $(".faq-question.active");
+
+		if ($activeQuestion.length && $activeQuestion[0] !== $question[0]) {
+		$activeQuestion.removeClass("active");
+		$activeQuestion.next().css("max-height", 0);
+		}
+
+		$question.toggleClass("active");
+		var $answer = $question.next();
+		
+		if ($question.hasClass("active")) {
+		$answer.css("max-height", $answer[0].scrollHeight + "px");
+		} else {
+		$answer.css("max-height", 0);
+		}
+	});
+
+	$containers.on("click", function() {
+		var $container = $(this);
+		var $activeContainer = $(".faq-container.active");
+
+		if ($activeContainer.length && $activeContainer[0] !== $container[0]) {
+			$activeContainer.removeClass("active");
+		}
+		$container.toggleClass("active");
+	});
 
 })(jQuery);
 

@@ -1,5 +1,317 @@
 @use '../../utils' as *;
+
 /*----------------------------------------*/
-/*  26. ABOUT US CSS START
+/*  Best Doctor Ever Section Stye star here 
 /*----------------------------------------*/
 
+.pb-120{
+    padding-bottom: 120px;
+}
+.best-doctor-ever{
+    .section-heading-wrapper{
+        text-align: center;
+        margin-bottom: 60px;
+        @media #{$md , $sm, $xs}{
+            margin-bottom: 25px;
+        }
+    }
+
+    .best-doctor-info-card{
+        position: relative;
+        border-bottom: 5px solid var(--st-common-white);
+        border-radius: 20;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+            border-bottom: 5px solid var(--st-theme-primary);
+            border-radius: 20px;
+        }
+
+        .best-doctor-info-wrapper{
+            position: relative;
+            box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+            background: var(--st-common-white);
+            border-radius: 20px;
+            padding: 40px 30px 38px 30px;
+            .doctor-image{
+                text-align: center;
+                img{
+                    box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+                    border-radius: 50%;
+                    border: 3px solid var(--st-theme-primary);
+                    width: 218px;
+                    height: 218px;
+                    object-fit: cover;
+                }
+            }
+            p{
+                font-size: 16px;
+                line-height: 24px;
+            }
+            .doctor-info{
+                text-align: center;
+                margin-top: 20px;
+                h3{
+                    font-size: 29.1px;
+                    line-height: 37.59px;
+                    margin-bottom: 10px;
+                }
+            }
+            .doctor-description{
+                text-align: center;
+            }
+        }
+
+        .info-footer-button-wapper{
+            position: absolute;
+            bottom: -25px;
+            text-align: center;
+            width: 100%;
+            i{
+                font-size: 24px;
+                line-height: 20px;
+                font-weight: 900;
+                padding: 20px;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+
+        .doctor-info-card-footer{
+            overflow: hidden;
+            .doctor-social-lists{
+                position: absolute;
+                top: 35px;
+                right: 30px;
+                li{
+                    transform: translateX(45px);
+                    opacity: 0;
+                    &:nth-child(1){
+                        transition: all 0.3s ease-in-out;
+                    }
+                    &:nth-child(2){
+                        transition: all 0.45s ease-in-out;
+                    }
+                    &:nth-child(3){
+                        transition: all 0.65s ease-in-out;
+                    }
+                    &:nth-child(4){
+                        transition: all 0.85s ease-in-out;
+                    }
+                    i{
+                        padding: 10px;
+                        margin-top: 15px;
+                        width: 37.42px;
+                        height: 36.83px;
+                        font-size: 16px;
+                        line-height: 16px;
+                        text-align: center;
+                        transition: all 0.3s ease-in-out;
+                        &:hover{
+                            background: var(--st-theme-primary);
+                        }
+                    }
+                }
+            }
+            .doctor-modal-header{
+                justify-content: flex-end;
+                border: none;
+                button{
+                    padding: 10px 10px 0 0;
+                    cursor: pointer;
+                }
+            }
+            .doctor-details-modal{
+                .doctor-image{
+                    width: 250px;
+                    height: 250px;
+                    text-align: center;
+                    border-radius: unset;
+                    margin: 0 auto;
+                    img{
+                        border-radius: 50%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .doctor-social-wrapper{
+                    left: 0;
+                }
+            }
+            .doctor-modal-footer{
+                padding: 20px 30px 40px;
+                border: none;
+            }
+        }
+
+        i{
+            border-radius: 50%;
+            background: var(--st-grey-1);
+        }
+
+        &:hover{
+            .info-footer-button-wapper{
+                i{
+                    background: var(--st-theme-primary);
+                }
+            }
+            .doctor-social-lists{
+                li{
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+        }
+
+        @media #{$md , $sm, $xs}{
+            margin: 15px 0 25px 0;
+        }
+    }
+}
+
+/*----------------------------------------*/
+/*  Pricing Plan Section Stye star here 
+/*----------------------------------------*/
+
+.pricing-tab-title-area{
+    padding-bottom: 60px;
+    @media #{$sm, $xs}{
+        flex-direction: column;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+    .tab-heading-wrapper{
+        h2{
+            margin: 0;
+            @media #{$sm, $xs}{
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .tab-button-wrapper{
+        ul{
+            background: var(--st-common-white);
+            border: 1px solid var(--st-grey-2);
+            border-radius: 999px;
+            overflow: hidden;
+            @media #{$sm, $xs}{
+                display: inline-flex;
+            }
+        }
+        .nav-pills .nav-link{
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 22.55px;
+            color: var(--st-heading-primary);
+            padding: 14px 26px;
+        }
+        .nav-pills .nav-link.active,
+        .nav-pills .show>.nav-link {
+            background: var(--st-theme-primary);
+            border-radius: unset;
+            color: var(--st-heading-primary);
+        }
+    }
+}
+
+.pricing-tab-content-area{
+    .pricing-plan-tab-content{
+        background: var(--st-grey-1);
+        border: 2px solid var(--st-grey-2);
+        border-radius: 20px;
+        padding: 40px; 
+        .tab-content-left-area{
+            padding-right: 35px;
+            @media #{$md, $sm, $xs}{
+                padding-right: 0;
+            }
+            .pricing-item{
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                justify-content: space-between;
+                align-items: center;
+                background: var(--st-common-white);
+                padding: 30px 40px;
+                margin-bottom: 30px;
+                border-radius: 20px;
+                transition: all 0.3s ease-in-out;
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                &:hover{
+                    background: var(--st-theme-primary);
+                    .item-name-wrapper span{
+                        background: rgba(30, 21, 21, 0.10);
+                    }
+                }
+                @media #{$xs, $sm, $lg}{
+                    flex-direction: column;
+                }
+                .item-name-wrapper{
+                    h3{
+                        font-size: 29.1px;
+                        font-weight: 400;
+                        line-height: 37.59px;
+                        margin: 0;
+                    }
+                    span{
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 16px;
+                        background: var(--st-theme-primary);
+                        border-radius: 20px;
+                        padding: 5px 15px;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+                .item-description-wrapper{
+                    p{
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 21px;
+                        margin: 0;
+                        @media #{$xs, $sm, $lg}{
+                            text-align: center;
+                        }
+                    }
+                }
+                .item-price-wrapper{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: end;
+                    align-items: baseline;
+                    p{
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 21px;
+                    }
+                }
+            }
+        }
+
+        .tab-content-right-area{
+            padding-left: 35px;
+            @media #{$md, $sm, $xs}{
+                padding-left: 0;
+                margin-top: 40px;
+            }
+            .item-feature-wrapper{
+                background: var(--st-common-white);
+                border-radius: 20px;
+                padding: 30px 45px;
+                min-height: 441px;
+                li{
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    margin: 15px 0;
+                    i{
+                        font-size: 14px;
+                        line-height: 16px;
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -15,7 +15,7 @@
             }
             img {
                 width: 100%;
-                border-radius: 999px;
+                border-radius: 50%;
                
             }
             .doctor-social-link {
@@ -46,17 +46,23 @@
         .doctor-profile {
             position: relative;
             .doctor-social-wrapper { 
-                width: 100%;
                 position: absolute;
+                width: 100%;
                 bottom: 51px;
+            }
+            @media #{$md, $sm, $xs}{
+                display: flex;
+                justify-content: center;
             }
         }
         .doctor-schedule-wrapper {
             margin: 40px 0;
             padding: 40px;
+            box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+            -webkit-box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+            -moz-box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
             border-radius: 20px;
             background: var(--st-common-white);
-            box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
             .doctor-schedule-time {
                 table {
                     width: 100%;
@@ -76,7 +82,7 @@
                                 font-size: 16px;
                                 margin-left: 15px;
                             }
-                            @media #{ $lg, $md}{
+                            @media #{ $lg}{
                                 display: flex;
                                 flex-direction: column-reverse;
                             }
@@ -167,7 +173,7 @@
                             color: var(--st-text-body);
                             font-size: 20px;
                             z-index: 999;
-                            @media #{$md, $sm, $xs}{
+                            @media #{$sm, $xs}{
                                 top: 0;
                             }
                         }

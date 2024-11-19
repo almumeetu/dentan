@@ -1,0 +1,60 @@
+@use "../../utils" as *;
+/*----------------------------------------*/
+/*   SERVICE CSS START
+/*----------------------------------------*/
+
+.services-post {
+  padding: 40px;
+      .blog-post-service {
+          .single-service-blog {
+            background: var(--st-common-white);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+  
+            &:hover {
+              box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+            }
+  
+            .single-service-img {
+             padding-bottom: 60px;
+            }
+  
+            h3 {
+              font-size: 29.1px;
+              font-weight: 600;
+              color: var(--st-common-black);
+              margin-bottom: 20px;
+            }
+  
+            p {
+              margin-bottom: 40px;
+              line-height: 1.5;
+            }
+            
+            .Read-More-Button {
+              .white-btn{
+                border: 1px solid var(--st-border-1);
+              }
+            }
+            .service-read-more {
+              display: inline-block;
+              font-size: 15px;
+              line-height: 22.55px;
+              text-decoration: none;
+              font-weight: 600;
+              border: 1px solid var(--st-border-1);
+              border-radius: 999px;
+              padding: 20px 30px 20px 30px;
+  
+              &:hover {
+                color: var(--st-common-white);
+                background: var(--st-heading-primary);
+              }
+            }
+          }
+      }
+  }
+  
