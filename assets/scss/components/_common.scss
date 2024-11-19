@@ -1,0 +1,66 @@
+@use '../utils'as *;
+
+
+//Doctor Social List
+.doctor-social-lists{
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    li{
+        transform: translateX(45px);
+        opacity: 0;
+        &:nth-child(1){
+            transition: all 0.3s ease-in-out;
+        }
+        &:nth-child(2){
+            transition: all 0.45s ease-in-out;
+        }
+        &:nth-child(3){
+            transition: all 0.65s ease-in-out;
+        }
+        &:nth-child(4){
+            transition: all 0.85s ease-in-out;
+        }
+        i{
+            padding: 10px;
+            margin-top: 15px;
+            width: 37.42px;
+            height: 36.83px;
+            font-size: 16px;
+            line-height: 16px;
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            border-radius: 50%;
+            background: var(--st-grey-1);
+            &:hover{
+                background: var(--st-theme-primary);
+            }
+        }
+    }
+}
+
+.doctor-modal-header{
+    justify-content: flex-end;
+    border: none;
+    button{
+        padding: 10px 10px 0 0;
+        cursor: pointer;
+    }
+}
+.doctor-details-modal{
+    .doctor-image{
+        width: 250px;
+        height: 250px;
+        text-align: center;
+        border-radius: unset;
+        margin: 0 auto;
+        img{
+            border-radius: 50%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .doctor-social-wrapper{
+        left: 0;
+    }
+}
