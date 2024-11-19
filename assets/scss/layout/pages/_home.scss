@@ -1121,3 +1121,83 @@
         }
     }
 }
+
+/*----------------------------------------*/
+/*  09. Blog CSS START HERE
+/*----------------------------------------*/
+.blog-area{
+    .blog-title-wrapper {
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 60px;
+        @media #{$xs,$sm} {
+            flex-direction: column;
+            gap: 18px;
+        }
+        h2 {
+            margin-bottom: 0;
+            @media #{$xs,$sm} {
+                text-align: center;
+            }
+            span{
+                display: block;
+                @media #{$xs,$sm} {
+                    display: inline;
+                }
+            }
+        }
+    }
+    .blog-wrapper{
+        .blog{
+            @media #{$xs,$sm,$md} {
+                margin-bottom: 30px;
+            }
+            .blog-img{
+                position: relative;
+                border-radius: 20px;
+                img{
+                    width: 100%;
+                }
+                margin-bottom: 20px;
+                .blog-overlay-icon{
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    width: 52px;
+                    height: 52px;
+                    background: var(--st-grey-1);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    line-height: 12px;
+                }
+            }
+            .blog-post-meta{
+                margin-bottom: 20px;
+                .blog-post-author{
+                    a{
+                        font-size: 12px;
+                    }
+                    i{
+                        font-size: 14px;
+                        padding-right: 5px;
+                    }
+                }
+                .blog-post-date{
+                    padding-left: 30px;
+                    i{
+                        font-size: 14px;
+                        padding-right: 5px;
+                    }
+                    a{
+                        font-size: 12px;
+                    }
+                }
+            }
+            .blog-title{
+                h4{}
+            }
+        }
+    }
+}
