@@ -39,6 +39,11 @@
             top: 70%;
             padding: 20px;
         }
+        @media #{$xs} {
+            margin: 0 10px; 
+            padding: 10px;
+        }
+        
     }
     .post-meta {
         gap: 50px;
@@ -89,11 +94,17 @@
     padding: 40px 40px 30px 40px;
     border-radius: 20px;
     box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
-    @media #{$lg} {
+    @media #{$lg,$xs} {
         padding: 20px 20px 10px 20px; 
         .sidebar-box {
             padding: 15px 20px;
         }
+    }
+    @media #{$md,$sm} {
+        margin-top: 80px;
+    }
+    @media #{$xs} {
+        margin-top: 50px;
     }
     li {
         list-style-type: none;
@@ -153,7 +164,7 @@
         max-height: 94px;
         border-radius: 20px;
         overflow: hidden;
-        @media #{$lg} {
+        @media #{$lg,$xs} {
             max-width: 60px;
             max-height: 74px;
             border-radius: 15px;
@@ -167,7 +178,7 @@
             &:hover {
                 transform: scale(1.1);
             }
-            @media #{$lg} {
+            @media #{$lg,$xs} {
                 border-radius: 15px;
             }
         }
@@ -177,7 +188,7 @@
         background-color: var(--st-grey-1);
         padding: 10px;
         border-radius: 20px;
-        @media #{$lg} {
+        @media #{$lg,$xs} {
             h6 {
                 font-size: 16px;
                 line-height: 20px;

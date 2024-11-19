@@ -170,18 +170,24 @@
 		  delay: 2000, // Removes delay for continuous movement
 		  disableOnInteraction: false, // Keeps autoplay active on interaction
 		},
-		speed: 3000, // Controls autoplay smoothness
+		speed: 1000, // Controls autoplay smoothness
 		pagination: {
 		  el: ".swiper-pagination",
 		  clickable: true,
 		},
 		breakpoints: {
-		  // For tablets (width < 1024px)
-		  1024: {
+		 1320: {
+			slidesPerView: 3,
+		 },
+		  // For tablets (width < 992)
+		  992: {
 			slidesPerView: 2,
 		  },
 		  // For mobile devices (width < 768px)
 		  768: {
+			slidesPerView: 1,
+		  },
+		  0: {
 			slidesPerView: 1,
 		  },
 		},

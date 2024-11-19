@@ -709,7 +709,7 @@
         }
 
         .testimonial-wrapper {
-            padding-top: 50px;
+            padding: 50px 20px 0 20px;
 
             .testimonial {
                 padding: 30px;
@@ -755,7 +755,7 @@
         }
 
         .report-appiontment-wrapper {
-            padding-top: 20px;
+            padding-top: 120px;
 
             .report-wrapper {
                 @media #{$xs,$sm,$md} {

@@ -1,0 +1,119 @@
+@use '../../utils' as *;
+
+.blog-details-author {
+    background: var(--st-grey-1);
+    border-radius: 20px;
+    padding: 30px;
+    gap: 20px;
+
+    .author-name {
+        font-weight: 500;
+    }
+    .blog-author-right {
+        p {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}
+.blog-post-bottom {
+    padding: 20px 0 30px 0;
+    border-top: 1px solid var(--st-grey-2);
+}
+.blog-details-tag {
+    label {
+        font-size: 29.1px;
+        line-height: 37.59px; 
+    }
+    .tagcloud {
+        display: inline;
+        .tag-cloud-link {
+            font-size: 16px;
+            line-height: 24px;
+            border-radius: 999px;
+            border: 1px solid var(--st-grey-2);
+            padding: 5px 10px;
+            margin-left: 20px;
+            &:hover {
+                background: var(--st-theme-primary);
+            }
+        } 
+    }
+}
+.blog-details-pagination {
+    border: 1px solid var(--st-grey-2);
+    padding: 20px 30px;
+    border-radius: 20px;
+    .bar {
+        width: 1px;
+        height: 50px;
+        background: var(--st-theme-primary);
+    }
+    .next, .previous {
+        font-size: 20.9px;
+        font-weight: 500;
+        line-height: 29.24px; 
+        position: relative;
+    }
+    .previous {
+        span {
+            position: absolute;
+            left: 70px;
+            top: 10px;
+        }
+    }
+    .next {
+        span {
+            position: absolute;
+            right: 70px;
+            top: 10px;
+        }
+    }
+    .pagination-arrow {
+        width: 50px;
+        height: 50px;
+        list-style-type: none;
+        border-radius: 999px;
+        border: 1px solid #D0D0D0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        &:hover {
+            border: none;
+            background: var(--st-theme-primary);
+        }
+    }
+    
+}
+.blog-details-comment {
+    padding-top: 60px;
+    .comment-number {
+        padding-bottom: 30px;
+    }
+    .comment-top-right {
+        .primary-btn {
+            background: #fff;
+            border: 1px solid var(--st-grey-2);
+            &:hover {
+                background: var(--st-theme-primary);
+            }
+        }
+    }
+    .comment-details {
+        padding: 30px;
+        border: 1px solid var(--st-grey-2);
+        border-radius: 20px;
+    }
+    .comment-meta {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .comment-bottom {
+        padding-top: 20px;
+        p {
+            font-size: 16px;
+            margin-bottom: 0;
+        }
+    }
+}
