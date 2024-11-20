@@ -1,0 +1,179 @@
+@use "../../utils" as *;
+/*----------------------------------------*/
+/*   PROJECT CSS START
+/*----------------------------------------*/
+
+.fashion-blog-wrapper {
+    margin: 120px 5%;
+
+    @media #{$lg,$md} {
+        margin: 80px 3%;
+    }
+
+    @media #{$sm,$xs} {
+        margin: 50px 2%;
+    }
+
+    .project-fashion-blog {
+        .single-fashion-blog {
+            border: none;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+
+            .fashion-blog-img {
+                position: relative;
+                border-radius: 20px;
+
+                img {
+                    width: 100%;
+                    border-radius: 20px;
+                }
+
+                .fashion-body {
+                    padding: 45px 30px 30px 30px;
+                    border-radius: 20px;
+                    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0.04%, rgba(255, 255, 255, 0.95) 38.07%);
+                    position: absolute;
+                    bottom: 0%;
+                    width: 100%;
+                    left: 0;
+                    right: 0;
+
+                    @media #{$md,$sm,$xs} {
+                        padding: 20px 10px;
+                    }
+
+                    .fashion-title {
+                        color: var(--st-common-black);
+                        font-size: 29.1px;
+                        padding-bottom: 20px;
+                        margin: 0;
+
+                        @media #{$md,$sm,$xs} {
+                            font-size: 24px;
+                            line-height: 24px;
+                        }
+                    }
+
+                    .tags {
+                        .tags-badge {
+                            background-color: var(--st-common-white);
+                            color: var(--st-common-black);
+                            border-radius: 20px;
+                            font-weight: 400;
+                            padding: 6px 15px;
+                            font-size: 18.4px;
+                            line-height: 27.56px;
+
+                            @media #{$md,$sm,$xs} {
+                                font-size: 14px;
+                                line-height: 24px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*--------------------------------------------------*/
+/*  02. Ask me Some Question Section Start Here
+/*---------------------------------------------------*/
+
+.some-questions-wrapper{
+    .some-questions{
+        .some-questions-title{
+            margin: 30px;
+            text-align: center;
+        }
+        .service-faq-area{
+            .service-faq-wrapper{
+                .faq-container {
+                    background-color: var(--st-common-white);
+                    border-radius: 20px;
+                    box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+                    margin: 20px 0;
+                    margin-right: 40px;
+                    }
+                    .faq-container.active{
+                        box-shadow: none;
+                        border: 1px solid var(--st-theme-primary);
+                        margin-right: 0px;
+                    }
+                    .faq-question {
+                        padding: 15px 0 15px 30px;
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                        justify-content: left;
+                        gap: 15px;
+                        .faq-question-text{
+                            margin: 0;
+                            font-size: 20.9px;
+                            font-weight: var(--st-fw-medium);
+                            line-height: 29.24px;
+                        }
+                        .faq-question-title{
+                            width: calc(100% - 115px);
+                        }
+                    }
+        
+                    .faq-question::after {
+                        content: "";
+                        background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2289%22%20height%3D%2224%22%20viewBox%3D%220%200%2089%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M2%2010.5C1.17157%2010.5%200.5%2011.1716%200.5%2012C0.5%2012.8284%201.17157%2013.5%202%2013.5L2%2010.5ZM88.0607%2013.0607C88.6464%2012.4749%2088.6464%2011.5251%2088.0607%2010.9393L78.5147%201.3934C77.9289%200.807618%2076.9792%200.807618%2076.3934%201.3934C75.8076%201.97919%2075.8076%202.92894%2076.3934%203.51473L84.8787%2012L76.3934%2020.4853C75.8076%2021.0711%2075.8076%2022.0208%2076.3934%2022.6066C76.9792%2023.1924%2077.9289%2023.1924%2078.5147%2022.6066L88.0607%2013.0607ZM2%2013.5L87%2013.5L87%2010.5L2%2010.5L2%2013.5Z%22%20fill%3D%22%231E1515%22%2F%3E%3C%2Fsvg%3E
+                            );
+                        background-color: var(--st-grey-1);
+                        height: 40px;
+                        width: 115px;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        border-radius: 999px;
+                        position: absolute;
+                        right: -40px;
+                        transition: 0.4s all ease-in-out;
+                    }
+        
+                    .faq-question.active::after {
+                        content: "";
+                        background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2224%22%20height%3D%2245%22%20viewBox%3D%220%200%2024%2045%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M13.5%202C13.5%201.17157%2012.8284%200.5%2012%200.5C11.1716%200.5%2010.5%201.17157%2010.5%202L13.5%202ZM10.9393%2044.0607C11.5251%2044.6464%2012.4749%2044.6464%2013.0607%2044.0607L22.6066%2034.5147C23.1924%2033.9289%2023.1924%2032.9792%2022.6066%2032.3934C22.0208%2031.8076%2021.0711%2031.8076%2020.4853%2032.3934L12%2040.8787L3.51472%2032.3934C2.92893%2031.8076%201.97919%2031.8076%201.3934%2032.3934C0.807613%2032.9792%200.807613%2033.9289%201.3934%2034.5147L10.9393%2044.0607ZM10.5%202L10.5%2043L13.5%2043L13.5%202L10.5%202Z%22%20fill%3D%22%231E1515%22%2F%3E%3C%2Fsvg%3E
+                        );
+                        background-color: var(--st-theme-primary);
+                        height: 71px;
+                        width: 40px;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        border-radius: 999px;
+                        position: absolute;
+                        right: 30px;
+                        top: 50px;
+                    }
+                    .faq-answer-container {
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: 0.3s;
+                    }
+        
+                    .faq-answer {
+                        padding: 0 110px 30px 76px;
+                        line-height: 1.5rem;
+                        p{
+                            margin: 0;
+                            font-size: 16px;
+                            line-height: 24px;
+                        }
+                }
+            }
+        }
+        .some-question-img {
+            padding: 15px 45px 0 45px;
+            @media #{$lg,$md,$sm} {
+                padding: 15px 0 0 45px;
+             }
+            img{
+                width: 100%;   
+            }
+        }
+    }
+}

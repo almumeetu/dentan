@@ -3,14 +3,16 @@
 .doctor-details {
     .doctor-details-left-area {
         .doctor-image {
+            position: relative;
             max-width: 410px;
             max-height: 410px;
             border-radius: 50%;
             overflow: hidden;
             cursor: pointer;
             &:hover{
-                .doctor-social-link{
+                .doctor-social-link li{
                     opacity: 1;
+                    transform: translateY(0);
                 }
             }
             img {
@@ -19,7 +21,6 @@
                
             }
             .doctor-social-link {
-                opacity: 0;
                 transition: all ease-in-out .2s;
                 ul {
                     list-style: none;
@@ -35,6 +36,20 @@
                         text-align: center;
                         padding-top: 2px;
                         cursor: pointer;
+                        transform: translateY(80px);
+                        opacity: 0;
+                        &:nth-child(1){
+                            transition: all 0.3s ease-in-out;
+                        }
+                        &:nth-child(2){
+                            transition: all 0.45s ease-in-out;
+                        }
+                        &:nth-child(3){
+                            transition: all 0.65s ease-in-out;
+                        }
+                        &:nth-child(4){
+                            transition: all 0.85s ease-in-out;
+                        }
                         i {
                             font-size: 14px;
                             line-height: 18.4px;
@@ -44,11 +59,10 @@
             }
         }
         .doctor-profile {
-            position: relative;
             .doctor-social-wrapper { 
                 position: absolute;
-                width: 100%;
                 bottom: 51px;
+                width: 100%;
             }
             @media #{$md, $sm, $xs}{
                 display: flex;
@@ -56,13 +70,16 @@
             }
         }
         .doctor-schedule-wrapper {
-            margin: 40px 0;
+            margin: 40px 0 0 0;
             padding: 40px;
             box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
             -webkit-box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
             -moz-box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
             border-radius: 20px;
             background: var(--st-common-white);
+            @media #{ $lg, $xs }{
+                padding: 30px 20px;
+            }
             .doctor-schedule-time {
                 table {
                     width: 100%;
@@ -99,7 +116,10 @@
     .doctor-details-right-area {
         padding: 60px 0 0 30px;
         @media #{$sm, $xs}{
-            padding: 0;
+            padding: 30px 0 0 0;
+        }
+        @media #{$md}{
+            padding: 40px 0 0 0;
         }
         .doctor-info-intro{
             h1{
@@ -107,6 +127,9 @@
             }
             p{
                 margin-bottom: 30px;
+                @media #{ $md, $sm, $xs }{
+                    margin-bottom: 20px;
+                }
             }
         }
         .doctor-experience {
@@ -115,16 +138,34 @@
             gap: 60px;
             flex-wrap: wrap;
             padding: 30px 0;
+            @media #{ $lg, $md, $sm, $xs } {
+                gap: 30px;
+            }
+            @media #{ $xs }{
+                flex-direction: column;
+                align-items: center;
+            }
             .experience-item {
                 display: flex;
                 gap: 20px;
                 flex-direction: row;
                 align-items: center;
+                @media #{ $xs } {
+                    flex-direction: column;
+                    justify-content: center;
+                }
                 svg {
                     width: 50px;
                     height: 50px;
+                    @media #{ $sm } {
+                        width: 35px;
+                        height: 35px;
+                    }
                 }
                 .experience-text-wrapper {
+                    @media #{ $sm } {
+                        text-align: center;
+                    }
                     h2 {
                         font-size: 33.4px;
                         line-height: 33.41px;

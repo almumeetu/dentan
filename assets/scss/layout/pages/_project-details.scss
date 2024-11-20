@@ -8,6 +8,23 @@
         .project-feature-image{
             width: 100%;
         }
+        .post-navigation-project{
+            background-color: var(--st-grey-1);
+            border: 1px solid var(--st-border-1);
+            border-radius: 999px !important; 
+            margin: 60px 0;
+            .previous-post{
+                i{
+                    padding-right: 8px;
+                }
+            }
+            .next-post{
+                i{
+                    padding-left: 8px;
+                    color: var(--st-theme-primary);
+                }
+            }
+        }
         .project-information{
             padding: 40px 30px;
             border-radius: 20px;
@@ -17,11 +34,12 @@
                 border: 1px solid var(--st-border-1);
                 border-radius: 999px;
                 text-align: center;
-                padding: 16px 61px 16px 42px;
+                padding: 16px 42px;
                 margin-bottom: 40px;
                 h3{
                     font-size: 29.1px;
                     font-weight: 400;
+                    margin: 0;
                 }
                 }
                 .project-details-information{

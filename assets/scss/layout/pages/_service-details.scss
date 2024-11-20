@@ -61,6 +61,7 @@
             border-radius: 20px;
             background-color: var(--st-theme-primary);
             padding: 40px;
+            margin: 40px 0;
             .icon-wrapper{
                 margin-bottom: 20px;
                 i{
@@ -84,13 +85,22 @@
             }
         }
         .appointment-form-wrapper{
-            margin-top: 40px;
             padding: 40px 30px;
             border-radius: 20px;
             background: var(--st-common-white);
             box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+            @media #{ $sm, $xs} {
+                padding: 30px 20px;
+            }
             h2{
                 margin-bottom: 40px;
+                @media #{ $sm, $xs} {
+                    margin-bottom: 30px;
+                }
+                @media #{ $lg } {
+                    font-size: 40px;
+                    line-height: 48px;
+                }
             }
             .appointment-form{
                 p{
@@ -100,8 +110,15 @@
                     gap: 20px;
                     flex-direction: row;
                     margin-bottom: 30px;
+                    @media #{ $xs }{
+                        flex-direction: column;
+                        margin-bottom: 20px;
+                    }
                     input[type = "text"],input[type = "email"]{
                         width: 50%;
+                        @media #{ $xs }{
+                            width: 100%;
+                        }
                     }
                     input[type = "textarea"], .nice-select, a{
                         width: 100%;
@@ -180,10 +197,16 @@
     .service-faq-wrapper{
         .faq-container {
             background-color: var(--st-common-white);
-            border-radius: 30px;
+            border-radius: 999px;
             box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
             margin: 20px 0;
             margin-right: 40px;
+            @media #{ $xs } {
+                margin-right: 20px;
+            }
+            @media #{ $xss } {
+                margin-right: 0;
+            }
             }
             .faq-container.active{
                 box-shadow: none;
@@ -198,6 +221,9 @@
                 cursor: pointer;
                 justify-content: left;
                 gap: 15px;
+                @media #{ $xss } {
+                    padding: 10px;
+                }
                 .faq-question-text{
                     margin: 0;
                     font-size: 20.9px;
@@ -206,6 +232,12 @@
                 }
                 .faq-question-title{
                     width: calc(100% - 115px);
+                    @media #{ $xs }{
+                        width: calc(100% - 100px);
+                    }
+                    @media #{ $xss } {
+                        width: calc(100% - 65px);
+                    }
                 }
             }
 
@@ -222,9 +254,45 @@
                 position: absolute;
                 right: -40px;
                 transition: 0.4s all ease-in-out;
+                @media #{ $xs } {
+                    right: -20px;
+                    width: 70px;
+                    height: 30px;
+                    background-position: right;
+                }
+                @media #{ $xss} {
+                    right: 10px;
+                    content: "\2b";
+                    font-size: 20px;
+                    font-weight: 600px;
+                    background-image: unset;
+                    padding: 3px 10px;
+                    width: 30px;
+                    height: 30px;
+                }
             }
 
-            .faq-question.active::after {
+            .faq-answer-container {
+                display: none;
+                overflow: hidden;
+                transition: 0.4s all ease-in-out;
+            }
+
+            .faq-answer {
+                padding: 0 110px 30px 76px;
+                line-height: 1.5rem;
+                p{
+                    margin: 0;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+        }
+        .faq-container.active {
+            border-radius: 20px;
+            .faq-answer-container{
+                display: block;
+            }
+            .faq-question::after {
                 content: "";
                 background-image: url(data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2224%22%20height%3D%2245%22%20viewBox%3D%220%200%2024%2045%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M13.5%202C13.5%201.17157%2012.8284%200.5%2012%200.5C11.1716%200.5%2010.5%201.17157%2010.5%202L13.5%202ZM10.9393%2044.0607C11.5251%2044.6464%2012.4749%2044.6464%2013.0607%2044.0607L22.6066%2034.5147C23.1924%2033.9289%2023.1924%2032.9792%2022.6066%2032.3934C22.0208%2031.8076%2021.0711%2031.8076%2020.4853%2032.3934L12%2040.8787L3.51472%2032.3934C2.92893%2031.8076%201.97919%2031.8076%201.3934%2032.3934C0.807613%2032.9792%200.807613%2033.9289%201.3934%2034.5147L10.9393%2044.0607ZM10.5%202L10.5%2043L13.5%2043L13.5%202L10.5%202Z%22%20fill%3D%22%231E1515%22%2F%3E%3C%2Fsvg%3E
                 );
@@ -237,22 +305,17 @@
                 position: absolute;
                 right: 30px;
                 top: 50px;
-            }
-            .faq-answer-container {
-                max-height: 0;
-                overflow: hidden;
-                transition: 0.3s;
-            }
-
-            .faq-answer {
-                padding: 0 110px 30px 76px;
-                line-height: 1.5rem;
-                p{
-                    margin: 0;
-                    font-size: 16px;
-                    line-height: 24px;
+                @media #{ $xss} {
+                    right: 10px;
+                    content: "\f068";
+                    font-size: 20px;
+                    font-weight: 600px;
+                    background-image: unset;
+                    padding: 3px 10px;
+                    width: 30px;
+                    height: 30px;
                 }
+            }
         }
     }
 }
-

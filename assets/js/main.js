@@ -84,19 +84,48 @@
 
 	////////////////////////////////////////////////////
 
+	////////////////////////////////////////////////////
+
 	// Accordion Plus or Minus btn toggle
 
-	$('.blog-accordion-button').on("click", function () {
-		const icon = $(this).find('.icon-toggle');
-		// Toggle icon based on collapse state
-		if ($(this).hasClass('collapsed')) {
-			icon.removeClass('fa-minus').addClass('fa-plus');
-		} else {
+	$('#faqAccordion').on('show.bs.collapse hide.bs.collapse', function (e) {
+		const icon = $(e.target).prev('.blog-accordion-button').find('.icon-toggle');
+		
+		if (e.type === 'show') {
 			icon.removeClass('fa-plus').addClass('fa-minus');
+		} else if (e.type === 'hide') {
+			icon.removeClass('fa-minus').addClass('fa-plus');
 		}
 	});
 
 
+	////////////////////////////////////////////////////
+	// Brand Carousel JS
+	$(document).ready(function () {
+		const swiper = new Swiper('.brand-carousel', {
+		  loop: true, 
+		  slidesPerView: 5, 
+		  spaceBetween: 30, 
+		  autoplay: {
+			delay: 1000, 
+			disableOnInteraction: true, 
+		  },
+		  breakpoints: {
+			320: {
+			  slidesPerView: 2,
+			  spaceBetween: 10,
+			},
+			768: {
+			  slidesPerView: 3,
+			  spaceBetween: 20,
+			},
+			1024: {
+			  slidesPerView: 5,
+			  spaceBetween: 30,
+			},
+		  },
+		});
+	  });
 	////////////////////////////////////////////////////
 
 	//Service Details page faq area

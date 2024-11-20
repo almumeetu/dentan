@@ -1,0 +1,43 @@
+@use '../../utils' as *;
+
+.contact-card-wrapper {
+    border: 1px solid var(--st-grey-2);
+    padding: 40px 20px 40px 40px;
+    border-radius: 20px;
+    @media #{$md} {
+        padding: 30px 10px 30px 30px;
+    }
+    @media #{$xs} {
+        padding: 20px 0 20px 20px;
+    }
+    .card-heading {
+        padding-bottom: 15px;
+        margin-right: 20px;
+        border-bottom: 1px solid var(--st-grey-2);
+        h4 {
+            margin: 0;
+        }
+    }
+    .contact-info {
+        a {
+            hyphens: auto; 
+            word-wrap: break-word; 
+            overflow-wrap: anywhere; 
+        }
+        li {
+            padding-top: 20px;
+            display: flex;
+            gap: 10px;
+            @media #{$xs} {
+                padding-top: 10px;
+            }
+        }
+    }
+}
+.contact-card {
+    .row {
+        @media #{$md,$sm,$xs} {
+            row-gap: 20px;
+        }
+    }
+}

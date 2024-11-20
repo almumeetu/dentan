@@ -1,9 +1,104 @@
 @use '../../utils' as *;
 
+
+
+/*------------------------------------------*/
+/*  Brand Carousel Section Style starts here 
+/*------------------------------------------*/
+.brand-carousel {
+    padding: 60px 0;
+    border-radius: 20px;
+    background: var(--st-grey-1);
+    @media #{$md, $sm} {
+        padding: 40px 0; 
+    }
+    @media #{$xs} {
+        padding: 30px 0; 
+    }
+    .swiper-slide {
+        background: var(--st-grey-1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  
+    img {
+      max-width: 100px; 
+      height: auto;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+  
+      &:hover {
+        filter: grayscale(0); 
+      }
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
 /*----------------------------------------*/
-/*  Best Doctor Ever Section Stye star here 
+/*  Best Doctor Ever Section Stye start here 
 /*----------------------------------------*/
 
+.counter-area{
+    background: var(--st-theme-primary);
+}
+.counter-wrapper{
+    display: flex;
+    gap: 57px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background: var(--st-common-white);
+    border-radius: 20px;
+    width: fit-content;
+    padding: 30px 40px;
+    overflow: hidden;
+    @media #{ $md, $sm, $xs }{
+        gap: 30px;
+    }
+    @media #{ $xs }{
+        gap: 15px;
+    }
+    @media ( max-width: 469px ){
+        flex-direction: column;
+    }
+    .item-area-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        @media #{ $sm, $xs }{
+            flex-direction: column;
+        }
+        .number-wrapper{
+            overflow: hidden;
+            min-width: 72px;
+        }
+        p{
+            margin: 0;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+        }
+    }
+}
+
+/*----------------------------------------*/
+/*  Best Doctor Ever Section Stye start here 
+/*----------------------------------------*/
+
+.pb-120{
+    padding-bottom: 120px;
+}
 .best-doctor-ever{
     .section-heading-wrapper{
         text-align: center;
@@ -16,11 +111,12 @@
     .best-doctor-info-card{
         position: relative;
         border-bottom: 5px solid var(--st-common-white);
-        border-radius: 20px;
+        border-radius: 20;
         transition: all 0.3s ease-in-out;
         &:hover{
             box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
             border-bottom: 5px solid var(--st-theme-primary);
+            border-radius: 20px;
         }
 
         .best-doctor-info-wrapper{
@@ -74,7 +170,40 @@
 
         .doctor-info-card-footer{
             overflow: hidden;
-           
+            .doctor-social-lists{
+                position: absolute;
+                top: 35px;
+                right: 30px;
+                li{
+                    transform: translateX(45px);
+                    opacity: 0;
+                    &:nth-child(1){
+                        transition: all 0.3s ease-in-out;
+                    }
+                    &:nth-child(2){
+                        transition: all 0.45s ease-in-out;
+                    }
+                    &:nth-child(3){
+                        transition: all 0.65s ease-in-out;
+                    }
+                    &:nth-child(4){
+                        transition: all 0.85s ease-in-out;
+                    }
+                    i{
+                        padding: 10px;
+                        margin-top: 15px;
+                        width: 37.42px;
+                        height: 36.83px;
+                        font-size: 16px;
+                        line-height: 16px;
+                        text-align: center;
+                        transition: all 0.3s ease-in-out;
+                        &:hover{
+                            background: var(--st-theme-primary);
+                        }
+                    }
+                }
+            }
             .doctor-modal-header{
                 justify-content: flex-end;
                 border: none;
@@ -88,8 +217,9 @@
                     width: 250px;
                     height: 250px;
                     text-align: center;
-                    border-radius: unset;
+                    border-radius: 50%;
                     margin: 0 auto;
+                    overflow: hidden;
                     img{
                         border-radius: 50%;
                         height: 100%;
@@ -132,7 +262,7 @@
 }
 
 /*----------------------------------------*/
-/*  Pricing Plan Section Stye star here 
+/*  Pricing Plan Section Stye start here 
 /*----------------------------------------*/
 
 .pricing-tab-title-area{
