@@ -51,3 +51,58 @@
     }
 }
 
+/*----------------------------------------*/
+/*  02. HEADER v2 CSS START HERE
+/*----------------------------------------*/
+.header-v2{
+    padding: 15px 120px;
+    background: var(--st-theme-primary);
+    .header-top-area{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .top-info {
+            display: flex;
+            .info-mail{
+                padding-right: 60px;
+                a{
+                    font-size: 12px;
+                    line-height: 16px;
+                    display: flex;
+                    color: #151422;
+                    i{
+                        font-size: 16px;
+                        margin-right: 9px;
+                        color: #FF474D;
+                    }
+                }
+            }
+            .info-location{
+                a{
+                    font-size: 12px;
+                    line-height: 16px;
+                    display: flex;
+                    color: #151422;
+                    i{
+                        font-size: 16px;
+                        margin-right: 9px;
+                        color: #FF474D;
+                    }
+                }
+            }
+        }
+        .top-socials{
+            ul{
+                li{
+                    display: inline;
+                    i{
+                        font-size: 15px;
+                        padding: 0 2px;
+                        margin-left: 23px;
+                        color: #151422;
+                    }
+                }
+            }
+        }
+    }
+}
