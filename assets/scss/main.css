@@ -3578,6 +3578,9 @@ input[type=color] {
   padding: 15px 120px;
   background: var(--st-theme-primary);
 }
+.header-v2 .header-navigation-2 {
+  padding: 25px 120px;
+}
 .header-v2 .header-top-area {
   display: flex;
   align-items: center;
