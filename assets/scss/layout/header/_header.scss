@@ -55,8 +55,10 @@
 /*  02. HEADER v2 CSS START HERE
 /*----------------------------------------*/
 .header-v2{
-    padding: 15px 120px;
-    background: var(--st-theme-primary);
+    .header-top-wrapper{
+        padding: 15px 120px;
+        background: var(--st-theme-primary);
+    }
     .header-top-area{
         display: flex;
         align-items: center;
