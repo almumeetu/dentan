@@ -383,6 +383,28 @@
     margin: 3px 0;
 }
 
+.vesion-2-menu-bar button .first-bar{
+    width: 17px;
+    margin: 3px 0;
+}
+.vesion-2-menu-bar button .second-bar{
+    width: 24px;
+    margin: 3px 0;
+}
+.vesion-2-menu-bar button .third-bar{
+    width: 22px;
+    margin: 3px 0;
+}
+.vesion-2-menu-bar{
+    width: 45px;
+    background: #F9F8F5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    border-radius: 50%;
+}
+
 @media screen and (max-width: 456px) {
     .header-3-menu-bar button .first-bar {
         height: 2px;

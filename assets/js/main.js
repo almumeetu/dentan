@@ -263,3 +263,27 @@
 		},
 	  });
 	  
+
+	  // Hero-2 Swiper
+
+	  var swiper = new Swiper(".mySwiperhero2", {
+		pagination: {
+		  el: ".swiper-pagination",
+		  type: "fraction",
+		},
+		navigation: {
+		  nextEl: ".swiper-button-next",
+		  prevEl: ".swiper-button-prev",
+		},
+		autoplay: {
+		  delay: 3000, 
+		  disableOnInteraction: false,
+		},
+		speed: 1000,
+		effect: "fade", 
+		fadeEffect: {
+		  crossFade: true, 
+		},
+		loop: true, 
+	  });
+	  
